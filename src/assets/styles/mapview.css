@@ -24,6 +24,10 @@ section {
   .p_uno {
     width: 100%;
   }
+  .p_dos {
+    width: 100%;
+    overflow-y: scroll;
+  }
 
   .map {
     margin-top: 5vw;

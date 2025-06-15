@@ -133,13 +133,15 @@ onMounted(async () => {
 })
 </script>
 <template>
-  <h3 class="text-light" @click="calcularDistancia()">Te recomendamos:</h3>
-  <div class="caja-recomendacion" v-for="(index, i) in cdpCercana">
-    <img :src="index.img" alt="" />
-    <div class="datos">
-      <h5 class="text-light">{{ index.nombre }}</h5>
-      <p class="text-light">Dirección {{ index.direccion }}</p>
-      <p @click="Unhide(index)" class="text-info">Ver mas</p>
+  <div class="contenedor">
+    <h3 class="text-light" @click="calcularDistancia()">Te recomendamos:</h3>
+    <div class="caja-recomendacion" v-for="(index, i) in cdpCercana">
+      <img :src="index.img" alt="" />
+      <div class="datos">
+        <h5 class="text-light">{{ index.nombre }}</h5>
+        <p class="text-light">Dirección {{ index.direccion }}</p>
+        <p @click="Unhide(index)" class="text-info">Ver mas</p>
+      </div>
     </div>
   </div>
 </template>
