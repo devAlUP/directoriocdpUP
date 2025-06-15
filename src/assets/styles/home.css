@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+section {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+}
+
+.carruzel {
+  height: 100vh;
+  width: 200%;
+  display: flex;
+  flex-direction: row;
+
+  transition-duration: 1.5s;
+  overflow-y: hidden;
+}
+
+img {
+  margin-top: 15vh;
+  width: 33vw;
+  margin-left: 10vw;
+}
+.carruzel2 {
+  width: 200%;
+  display: flex;
+  flex-direction: row;
+
+  margin-left: -100%;
+  transition-duration: 2s;
+}
+.vistauno {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+}
+.vistados {
+  width: 50%;
+  overflow-y: hidden;
+}
+p {
+  margin-top: 15vh;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25vh;
+  background: linear-gradient(100deg, #ffa200, #ba5ec4, #5e6ac4, #5ec46f);
+  line-height: 0.9;
+  margin-left: 0.5rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+button {
+  width: 33vw;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-radius: 10px;
+  font-size: 3vh;
+  height: 5vh;
+  margin-left: 10vw;
+  font-family: 'Bebas Neue', sans-serif;
+}
+button img {
+  display: none;
+}
+@media (max-width: 1024px) {
+  h5 {
+    margin-bottom: 15%;
+  }
+  section {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .carruzel {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+
+    transition-duration: 1.5s;
+  }
+  button img {
+    width: 3vh;
+  }
+  .carruzel2 {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+
+    margin-left: -100%;
+    transition-duration: 2s;
+  }
+  .vistauno {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    display: none;
+  }
+  .vistados {
+    width: 50%;
+  }
+  p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25vw;
+    background: linear-gradient(100deg, #ffa200, #ba5ec4, #5e6ac4, #5ec46f);
+    line-height: 0.9;
+    margin-left: 0.5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  button {
+    width: 30%;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    border-radius: 10px;
+    font-size: 3vh;
+    margin-left: 35%;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  .desktop {
+    display: flex;
+  }
+}

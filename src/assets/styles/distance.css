@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 6vw;
+  margin-left: 2rem;
+  margin-bottom: 1vw;
+}
+.caja-recomendacion {
+  width: 45vw;
+  margin-left: 2.5vw;
+  margin-bottom: 1vw;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  padding: 1vw;
+}
+.caja-recomendacion img {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 5px;
+  margin-right: 1.5vw;
+}
+p {
+  margin-left: 2.5vw;
+}
+
+@media (max-width: 1024px) {
+  h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  .caja-recomendacion {
+    width: 95vw;
+    margin: 2.5vw;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+  }
+  .caja-recomendacion img {
+    margin: 3vw;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 5px;
+  }
+  p {
+    line-height: 1;
+    margin-bottom: 0.5;
+  }
+}

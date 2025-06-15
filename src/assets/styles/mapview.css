@@ -1,0 +1,59 @@
+section {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.p_uno {
+  width: 50vw;
+}
+.p_dos {
+  width: 50vw;
+}
+.map {
+  margin-top: 4vw;
+  width: 40vw;
+  height: 40vw;
+  margin-left: 4vw;
+}
+
+@media (max-width: 1024px) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  .p_uno {
+    width: 100%;
+  }
+
+  .map {
+    margin-top: 5vw;
+    width: 90vw;
+    height: 90vw;
+    margin-left: 5vw;
+  }
+
+  .buscar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(73, 64, 64, 0.649);
+    justify-content: center;
+  }
+  .buscar-text {
+    width: 90vw;
+    height: 35vh;
+    margin-top: 30vh;
+    margin-left: 5vw;
+    border-radius: 5%;
+    border-color: white;
+  }
+  .buscar-text h4 {
+    padding: 1rem;
+  }
+  .input-space {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
