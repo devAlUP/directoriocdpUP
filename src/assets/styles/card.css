@@ -13,6 +13,36 @@
   margin-left: 25vw;
   z-index: 5;
 }
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 7;
+  background-color: rgba(73, 64, 64, 0.649);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loader img {
+  margin-left: 45vw;
+  width: 10vw;
+  object-fit: cover; /* Para mantener la relación de aspecto */
+  animation: crecer 1.5s infinite alternate;
+}
+@keyframes crecer {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2); /* Aumenta el tamaño */
+  }
+}
+
+.loader h1 {
+  text-align: center;
+}
 .datos-card {
   display: flex;
   flex-direction: row;

@@ -18,6 +18,7 @@ const app = getCurrentInstance()
 const $googleMapsLoader = app.appContext.config.globalProperties.$googleMapsLoader
 const Unhide = (data) => {
   console.log(data)
+  console.log(cdpCercana.value)
 
   storeCard.setdata(data)
   storeCard.swichtStatus(true)
@@ -76,9 +77,14 @@ const calcularDistancia = async () => {
         element.elements[0].status === 'OK'
       ) {
         let distancia = element.elements[0].distance.text
-        distancia = distancia.replace('km', '').replace('m', '').replaceAll(' ', '') // Quitar 'm' también si es el caso
-        distancia = parseFloat(distancia)
-
+        if (distancia.indexOf('km') != -1) {
+          distancia = distancia.replace('km', '').replace('m', '').replaceAll(' ', '') // Quitar 'm' también si es el caso
+          distancia = parseFloat(distancia)
+          distancia = distancia * 1000
+        } else {
+          distancia = distancia.replace('km', '').replace('m', '').replaceAll(' ', '') // Quitar 'm' también si es el caso
+          distancia = parseFloat(distancia)
+        }
         dists.push({
           distance: distancia,
           nombre: cdpData.nombre, // Usar cdpData que pasamos en la promesa
@@ -113,10 +119,11 @@ const calcularDistancia = async () => {
         })
       }
     })
-    console.log(dists)
 
     dists.sort((a, b) => a.distance - b.distance)
     cdpCercana.value = dists.slice(0, 3)
+
+    console.log(dists)
     console.log(cdpCercana.value)
   } catch (e) {
     error.value = 'Error al cargar la API de Google Maps: ' + e

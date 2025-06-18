@@ -11,6 +11,11 @@ const center = ref({ lat: direccionStatus.lat, lng: direccionStatus.lng })
 const markerOptions = ref({ position: center.value, title: 'mi ubicacion' })
 
 console.log(storeCard.dataCard.img)
+
+const loader = ref(true)
+setTimeout(() => {
+  loader.value = false
+}, 3000)
 </script>
 <template>
   <div class="c-font">
@@ -76,6 +81,10 @@ console.log(storeCard.dataCard.img)
         aria-label="Close"
       ></button>
     </div>
+  </div>
+  <div class="loader" v-if="loader == true">
+    <img src="../assets/loader.png" alt="" />
+    <h1 class="text-light">Cargando...</h1>
   </div>
 </template>
 <style scoped src="../assets/styles/card.css" />

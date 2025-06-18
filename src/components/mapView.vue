@@ -46,7 +46,6 @@ console.log(cdpdir.value)
           >
             <div style="text-align: center" @click="Unhide(location)">
               <div style="font-size: 1.125rem">
-                <p>cdp {{ location.lider }}</p>
                 <img src="../assets/logo.png" width="50" height="50" style="margin-top: 8px" />
               </div>
             </div>
