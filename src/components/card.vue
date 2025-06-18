@@ -15,7 +15,7 @@ console.log(storeCard.dataCard.img)
 const loader = ref(true)
 setTimeout(() => {
   loader.value = false
-}, 3000)
+}, 4000)
 </script>
 <template>
   <div class="c-font">
@@ -30,7 +30,6 @@ setTimeout(() => {
         <CustomMarker :options="markerOptions">
           <div style="text-align: center">
             <div style="font-size: 1.125rem">
-              <p>mi ubicacion</p>
               <img src="../assets/pinUB.png" width="50" height="50" style="margin-top: 8px" />
             </div>
           </div>
@@ -43,7 +42,6 @@ setTimeout(() => {
         >
           <div style="text-align: center" @click="Unhide(location)">
             <div style="font-size: 1.125rem">
-              <p>cdp {{ storeCard.dataCard.nombre }}</p>
               <img src="../assets/logo.png" width="50" height="50" style="margin-top: 8px" />
             </div>
           </div>

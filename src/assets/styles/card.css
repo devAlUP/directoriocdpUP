@@ -77,6 +77,21 @@
     margin-left: 10vw;
     z-index: 5;
   }
+  .loader img {
+    margin-left: 30vw;
+    width: 40vw;
+    object-fit: cover; /* Para mantener la relación de aspecto */
+    animation: crecer 1.5s infinite alternate;
+  }
+  @keyframes crecer {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2); /* Aumenta el tamaño */
+    }
+  }
+
   .datos-card {
     display: flex;
     flex-direction: row;
