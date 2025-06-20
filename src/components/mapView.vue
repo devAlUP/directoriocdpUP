@@ -33,7 +33,6 @@ console.log(cdpdir.value)
         <CustomMarker :options="markerOptions">
           <div style="text-align: center">
             <div style="font-size: 1.125rem">
-              <p>mi ubicacion</p>
               <img src="../assets/pinUB.png" width="50" height="50" style="margin-top: 8px" />
             </div>
           </div>
