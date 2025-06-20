@@ -51,7 +51,7 @@ setTimeout(() => {
       <div class="card-body">
         <h4 class="text-light">{{ storeCard.dataCard.nombre }}</h4>
 
-        <h5 class="text-light">Direccion:</h5>
+        <h5 class="text-light">Dirección:</h5>
         <p class="text-light">{{ storeCard.dataCard.direccion }}</p>
 
         <div class="datos-card">
@@ -59,16 +59,16 @@ setTimeout(() => {
           <p class="text-light">: {{ storeCard.dataCard.horario }}</p>
         </div>
         <div class="datos-card">
-          <h5 class="text-light" style="margin-right: 4px">Lider</h5>
+          <h5 class="text-light" style="margin-right: 4px">Líder</h5>
           <p class="text-light">: {{ storeCard.dataCard.lider }}</p>
         </div>
 
         <div class="datos-card">
-          <h5 class="text-light">Coolideres</h5>
+          <h5 class="text-light">Coolider</h5>
           <p class="text-light">: {{ storeCard.dataCard.colider }}</p>
         </div>
         <div class="datos-card">
-          <h5 class="text-light">Telefono</h5>
+          <h5 class="text-light">Teléfono</h5>
           <p class="text-light">: {{ storeCard.dataCard.telefono }}</p>
         </div>
       </div>
