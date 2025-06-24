@@ -1,7 +1,20 @@
 [
   {
+    "nombre": "POLANCO ",
+    "direccion": "Calle Francisco Petrarca 226, Polanco, Polanco V Secc, Miguel Hidalgo, 11560 Ciudad de México, CDMX",
+    "horario": "Miercoles 19:00 hrs",
+    "lider": "Joel Irazabal",
+    "telefono": "55-49-94-81-05",
+    "colider_uno": "",
+    "colider_dos": "",
+    "lat": 19.434750218367093,
+    "lng": -99.1854338481341,
+    "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
+  },
+
+  {
     "nombre": "OAXACA ",
-    "dirección": "Reforma #210, Col. Del Maestro, C.P. 68016, Oaxaca de Juárez, Oaxaca ",
+    "direccion": "Reforma #210, Col. Del Maestro, C.P. 68016, Oaxaca de Juárez, Oaxaca ",
     "horario": "Domingo 16:00 hrs ",
     "lider": "Juanita Santiago ",
     "telefono": "52-95-12-40-29-76",
@@ -547,8 +560,8 @@
     "telefono": "72-91-33-43-55",
     "colider_uno": "Israel Paz ",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -1,
+    "lat": 19.27733187282363,
+    "lng": -99.6375522333315,
     "img": "https://storage.googleapis.com/fotos_cdpp/jahaz.jpg"
   },
   {
@@ -559,8 +572,8 @@
     "telefono": "72-93-32-93-01",
     "colider_uno": "Guadalupe Mendoza ",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -1,
+    "lat": 19.110961625324368,
+    "lng": -99.58948460230076,
     "img": "https://storage.googleapis.com/fotos_cdpp/Guadalupe.jpg"
   },
   {
@@ -571,8 +584,9 @@
     "telefono": "72-24-44-70-41 ",
     "colider_uno": "Itzel Valdez",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -1,
+    "lat": 19.211638229262984,
+
+    "lng": -99.58421209188361,
     "img": "https://storage.googleapis.com/fotos_cdpp/Kari.jpg"
   },
   {
@@ -583,8 +597,9 @@
     "telefono": "55-33-50-46-81 ",
     "colider_uno": "",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -1,
+    "lat": 19.33572828906499,
+
+    "lng": -99.0075192852868,
     "img": "https://storage.googleapis.com/fotos_cdpp/America.jpg"
   },
   {
@@ -595,8 +610,9 @@
     "telefono": "72-26-21-07-26 ",
     "colider_uno": "Miguel Ramírez",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -1,
+
+    "lat": 19.27410661957299,
+    "lng": -99.59740005903419,
     "img": "https://storage.googleapis.com/fotos_cdpp/Miriam.jpg"
   },
   {
@@ -619,8 +635,9 @@
     "telefono": "72-25-17-03-90",
     "colider_uno": "Reyna Mejía ",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -1,
+    "lat": 19.357269068285156,
+
+    "lng": -99.59614750031523,
     "img": "https://storage.googleapis.com/fotos_cdpp/Pamela.jpg"
   },
   {
@@ -631,8 +648,8 @@
     "telefono": "56-45-72-70-49",
     "colider_uno": "Fanny García ",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -1,
+    "lat": 19.342578013841898,
+    "lng": -98.84566894388583,
     "img": "https://storage.googleapis.com/fotos_cdpp/Jesus.jpg"
   },
   {
@@ -643,8 +660,9 @@
     "telefono": "72-21-77-29-90",
     "colider_uno": "Azucena Sánchez",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -1,
+    "lat": 19.10033936025905,
+
+    "lng": -99.58686591795141,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
@@ -679,8 +697,9 @@
     "telefono": "72-29-06-76-69",
     "colider_uno": "Armando Hernández ",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -12,
+    "lat": 19.259412770885287,
+
+    "lng": -99.5890279506965,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
@@ -691,8 +710,8 @@
     "telefono": "55-11-22-17-112",
     "colider_uno": "Yolanda Hernández",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -13,
+    "lat": 19.367563035829534,
+    "lng": -99.29487580504566,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
@@ -703,8 +722,9 @@
     "telefono": "72-03-26-50-39",
     "colider_uno": "Ingrid Cruz ",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -14,
+    "lat": 19.10380426438951,
+
+    "lng": -99.58104943591685,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
@@ -715,8 +735,8 @@
     "telefono": "55-34-95-32-50",
     "colider_uno": "María Cruz ",
     "colider_dos": "",
-    "lat": 1,
-    "lng": -15,
+    "lat": 19.35819941810308,
+    "lng": -99.30388604677056,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
