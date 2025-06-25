@@ -12,13 +12,15 @@ export const useCardStatus = defineStore('hideUnhide', () => {
     dataCard.value.nombre = data.nombre
     dataCard.value.direccion = data.direccion
     dataCard.value.lider = data.lider
-    dataCard.value.colider = data.colider_uno + ' ' + data.colider_dos
+    dataCard.value.colider =
+      data.colider_uno == 'n/a' ? 'n/a' : data.colider_uno + ' ' + data.colider_dos
     dataCard.value.telefono = LadaTelefonos(data.telefono)
     dataCard.value.horario = data.horario
     dataCard.value.lat = data.lat
     dataCard.value.lng = data.lng
     dataCard.value.img = data.img
     console.log(data.img)
+    console.log(dataCard.value.colider)
   }
   return { statusCard, swichtStatus, dataCard, setdata }
 })

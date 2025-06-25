@@ -63,7 +63,7 @@ setTimeout(() => {
           <p class="text-light">: {{ storeCard.dataCard.lider }}</p>
         </div>
 
-        <div class="datos-card" v-if="storeCard.dataCard.lider != 'Joel Irazabal'">
+        <div class="datos-card" v-if="storeCard.dataCard.colider != 'n/a'">
           <h5 class="text-light">Coolider</h5>
           <p class="text-light">: {{ storeCard.dataCard.colider }}</p>
         </div>
