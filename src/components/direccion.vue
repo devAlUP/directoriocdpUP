@@ -99,7 +99,9 @@ onMounted(async () => {
           aria-describedby="button-addon2"
         />
       </div>
-      <p class="text-light">la direccion que elegiste es: <br />{{ direccion }}</p>
+
+      <!----<p class="text-light">la direccion que elegiste es: <br />{{ direccion }}</p>-->
+
       <button type="button" class="btn btn-success buttonbuscar" @click="useSetLatLNG(lat, lng)">
         Aceptar
       </button>

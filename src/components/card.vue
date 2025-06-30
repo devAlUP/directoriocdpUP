@@ -64,7 +64,7 @@ setTimeout(() => {
         </div>
 
         <div class="datos-card" v-if="storeCard.dataCard.colider != 'n/a'">
-          <h5 class="text-light">Coolider</h5>
+          <h5 class="text-light">ColÍder</h5>
           <p class="text-light">: {{ storeCard.dataCard.colider }}</p>
         </div>
         <div class="datos-card">

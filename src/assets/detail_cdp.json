@@ -2,7 +2,7 @@
   {
     "nombre": "POLANCO ",
     "direccion": "Calle Francisco Petrarca 226, Polanco, Polanco V Secc, Miguel Hidalgo, 11560 Ciudad de México, CDMX",
-    "horario": "Miercoles 20:00 hrs",
+    "horario": "Miércoles 20:00 hrs",
     "lider": "Joel Irazabal",
     "telefono": "55-49-94-81-05",
     "colider_uno": "n/a",
@@ -25,8 +25,8 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Juanita.jpg"
   },
   {
-    "nombre": "SAN PEDRO TETITLAN PUEBLA ",
-    "direccion": "C. Nacional #8, Col. San Pedro Tetitlan, San José Miahuatlán, Puebla",
+    "nombre": "SAN PEDRO TETITLÁN PUEBLA ",
+    "direccion": "C. Nacional #8, Col. San Pedro Tetitlán, San José Miahuatlán, Puebla",
     "horario": "Miércoles 18:00 hrs ",
     "lider": "Francisco Castillo ",
     "telefono": "23-81-69-51-53",
@@ -50,7 +50,7 @@
   },
   {
     "nombre": "TENANGO DEL VALLE ",
-    "direccion": "Gral. Porfirio Díaz Mori #207 2ºpiso,  Colonia Centro,  C.P. 52300, Tenango del Valle, Edo. De México ",
+    "direccion": "Gral. Porfirio Díaz Mori #207 2º piso,  Colonia Centro,  C.P. 52300, Tenango del Valle, Edo. De México ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Paulina Díaz ",
     "telefono": "72-91-18-60-90 ",
@@ -62,7 +62,7 @@
   },
   {
     "nombre": "TENANGO DEL VALLE (SAN MIGUEL)",
-    "direccion": "2ª cda de Ignacio Zaragoza #101. Localidad San Miguel Balderas, C.P. , Tenango del Valle, Edo. De México ",
+    "direccion": "2ª cda de Ignacio Zaragoza #101. Localidad San Miguel Balderas, C.P. 52345 , Tenango del Valle, Edo. De México ",
     "horario": "Miércoles 18:00 hrs ",
     "lider": "Jesús Flores ",
     "telefono": "72-21-95-02-31",
@@ -182,7 +182,7 @@
   },
   {
     "nombre": "SAN BARTOLO (ALVARO OBREGON)",
-    "direccion": "Comunal #28, Col. Pueblo San Bartolo Ameyalco, C.P.01800, Alcaldía Álvaro Obregón",
+    "direccion": "Comunal #28, Col. Pueblo San Bartolo Ameyalco, C.P. 01800, Alcaldía Álvaro Obregón",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Aaron Espinosa ",
     "telefono": "56-11-79-14-36",
@@ -301,7 +301,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/LIDERES_7567.jpg"
   },
   {
-    "nombre": "ADOLFO LOPEZ MATEOS (CUAJIMALPA)",
+    "nombre": "ADOLFO LÓPEZ MATEOS (CUAJIMALPA)",
     "direccion": "1ª cda. Adolfo López Mateos #94, Col. Cuajimalpa, C.P. 05280, Alcaldía Cuajimalpa  ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Isabel Chávez ",
@@ -338,7 +338,7 @@
   },
   {
     "nombre": "MIXCOAC ",
-    "direccion": "Tiziano #21 2º piso local 16, Col. Mixcoac, C.P. 03910, Alcaldía Benito Juárez",
+    "direccion": "Tiziano #21, 2º piso local 16, Col. Mixcoac, C.P. 03910, Alcaldía Benito Juárez",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Itzel Solorzano",
     "telefono": "56-50-47-12-06",
@@ -386,7 +386,7 @@
   },
   {
     "nombre": "CENTRAL PARK INTERLOMAS ",
-    "direccion": "Vía Magna #6, Col. Lomas de las Palmas, Central Park Interlomas, C.P.52787, Huixquilucan",
+    "direccion": "Vía Magna #6, Col. Lomas de las Palmas, Central Park Interlomas, C.P. 52787, Huixquilucan",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Velia Bolaños ",
     "telefono": "55-45-76-48-02",
@@ -421,8 +421,8 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Agustina.jpg"
   },
   {
-    "nombre": "EX-HIPODROMO PERALVILLO ",
-    "direccion": "Ricardo Bel #26, Col. Ex-hipodromo de Peralvillo, C.P. 06250, Alcaldía Cuauhtémoc ",
+    "nombre": "EX-HIPÓDROMO PERALVILLO ",
+    "direccion": "Ricardo Bel #26, Col. Ex-hipódromo de Peralvillo, C.P. 06250, Alcaldía Cuauhtémoc ",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Eva Martínez ",
     "telefono": "55-12-27-09-13",
@@ -470,7 +470,7 @@
   },
   {
     "nombre": "SATÉLITE",
-    "direccion": "Circuito Circunvalación poniente #29, Ciudad Satélite, C.P. 53100, Naucalpan ",
+    "direccion": "Circuito Circunvalación Poniente #29, Ciudad Satélite, C.P. 53100, Naucalpan ",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Daniela Morales ",
     "telefono": "55-82-33-43-42",
@@ -493,7 +493,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Luis.JPG"
   },
   {
-    "nombre": "ATIZAPAN DE ZARAGOZA ",
+    "nombre": "ATIZAPÁN DE ZARAGOZA ",
     "direccion": "Av. Bosque Esmeralda ote. Lt. 1 Mz. 6, Arboro Residencial, Col. Bosque Esmeralda, C.P. 52930, Atizapán de Zaragoza, Edo. De México  ",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Olivia Meza ",
@@ -530,7 +530,7 @@
   },
   {
     "nombre": "TEMASCALAPA",
-    "direccion": "Mar Báltico #3-B, Col. Ex-hacienda de Paula, C.P.55993, Temascalapa, Edo. de México ",
+    "direccion": "Mar Báltico #3-B, Col. Ex-hacienda de Paula, C.P. 55993, Temascalapa, Edo. de México ",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Erick Jiménez ",
     "telefono": "56-44-89-26-36",
@@ -585,7 +585,6 @@
     "colider_uno": "Itzel Valdez",
     "colider_dos": "",
     "lat": 19.211638229262984,
-
     "lng": -99.58421209188361,
     "img": "https://storage.googleapis.com/fotos_cdpp/Kari.jpg"
   },
@@ -598,7 +597,6 @@
     "colider_uno": "n/a",
     "colider_dos": "",
     "lat": 19.33572828906499,
-
     "lng": -99.0075192852868,
     "img": "https://storage.googleapis.com/fotos_cdpp/America.jpg"
   },
@@ -610,7 +608,6 @@
     "telefono": "72-26-21-07-26 ",
     "colider_uno": "Miguel Ramírez",
     "colider_dos": "",
-
     "lat": 19.27410661957299,
     "lng": -99.59740005903419,
     "img": "https://storage.googleapis.com/fotos_cdpp/Miriam.jpg"
@@ -661,12 +658,11 @@
     "colider_uno": "Azucena Sánchez",
     "colider_dos": "",
     "lat": 19.10033936025905,
-
     "lng": -99.58686591795141,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "TONATICO ",
+    "nombre": "TONÁTICO ",
     "direccion": "Matamoros #13, Col. , C.P. 51950, Tonatico, Edo. De México ",
     "horario": "Miércoles 20:00 hrs",
     "lider": "Vladimiro Aguirre",
@@ -679,13 +675,13 @@
   },
   {
     "nombre": "IZTAPALAPA PARAJE ZACATEPEC",
-    "direccion": "Cda De Morelos #37, Int. 2, Col. Paraje Zacatepec, C.P. 09560, Alcaldía Iztapalapa ",
+    "direccion": "Cda de Morelos #37, Int. 2, Col. Paraje Zacatepec, C.P. 09560, Alcaldía Iztapalapa ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Mayela Ramírez ",
     "telefono": "56-10-56-33-68",
     "colider_uno": "Michell Arredondo ",
     "colider_dos": "",
-    "lat": 19.35730252923141, 
+    "lat": 19.35730252923141,
     "lng": -99.01535819022959,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
@@ -716,14 +712,13 @@
   },
   {
     "nombre": "LA CAMPESINA (TENANGO DEL VALLE)",
-    "direccion": "2ª Cda. De David Alfaro Siqueiros S/N, Col. La Campesina, C.P.52300, Tenango del Valle ",
+    "direccion": "2ª Cda. De David Alfaro Siqueiros S/N, Col. La Campesina, C.P. 52300, Tenango del Valle ",
     "horario": "Miércoles 18:45 hrs ",
     "lider": "Deyanira Cruz ",
     "telefono": "72-03-26-50-39",
     "colider_uno": "Ingrid Cruz ",
     "colider_dos": "",
     "lat": 19.10380426438951,
-
     "lng": -99.58104943591685,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
