@@ -1,6 +1,6 @@
 [
   {
-    "nombre": "POLANCO ",
+    "nombre": "MIGUEL HIDALGO",
     "direccion": "Calle Francisco Petrarca 226, Polanco, Polanco V Secc, Miguel Hidalgo, 11560 Ciudad de México, CDMX",
     "horario": "Miércoles 20:00 hrs",
     "lider": "Joel Irazabal",
@@ -13,9 +13,9 @@
   },
 
   {
-    "nombre": "OAXACA ",
+    "nombre": "OAXACA DE JUÁREZ",
     "direccion": "Reforma #210, Col. Del Maestro, C.P. 68016, Oaxaca de Juárez, Oaxaca ",
-    "horario": "Domingo 16:00 hrs ",
+    "horario": "Domingo 11:00 hrs ",
     "lider": "Juanita Santiago ",
     "telefono": "95-12-40-29-76",
     "colider_uno": "n/a",
@@ -25,7 +25,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Juanita.jpg"
   },
   {
-    "nombre": "SAN PEDRO TETITLÁN PUEBLA ",
+    "nombre": "JOSÉ MIAHUATLÁN",
     "direccion": "C. Nacional #8, Col. San Pedro Tetitlán, San José Miahuatlán, Puebla",
     "horario": "Miércoles 18:00 hrs ",
     "lider": "Francisco Castillo ",
@@ -37,7 +37,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "PUEBLA ",
+    "nombre": "TEHUACÁN",
     "direccion": "2ª Privada de la 13 sur #2, Barrio La Purísima Santiago Miahuatlán, C.P. 75820, Tehuacán ",
     "horario": "Miércoles 18:00 hrs ",
     "lider": "Elizabeth García ",
@@ -61,7 +61,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Paulina.jpg"
   },
   {
-    "nombre": "TENANGO DEL VALLE (SAN MIGUEL)",
+    "nombre": "TENANGO DEL VALLE 2",
     "direccion": "2ª cda de Ignacio Zaragoza #101. Localidad San Miguel Balderas, C.P. 52345 , Tenango del Valle, Edo. De México ",
     "horario": "Miércoles 18:00 hrs ",
     "lider": "Jesús Flores ",
@@ -73,7 +73,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "TENANGO DEL VALLE ",
+    "nombre": "TENANGO DEL VALLE 3",
     "direccion": "Juárez Nte. #201, Col. Centro, C.P. 52300, Tenango del Valle, Edo. De México ",
     "horario": "Miércoles 19:30 hrs ",
     "lider": "Gabriela Paz ",
@@ -97,7 +97,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/GaelYolem.jpg"
   },
   {
-    "nombre": "CHAPULTEPEC CENTRO ",
+    "nombre": "SAN MIGUEL CHAPULTEPEC",
     "direccion": "Av. Libertad #44, Col. Centro, C.P. 52240, Chapultepec. Edo. De México ",
     "horario": "Miércoles 19:00 hrs ",
     "lider": "Tomasa López",
@@ -109,7 +109,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Miguel.jpg"
   },
   {
-    "nombre": "CHAPULTEPEC ",
+    "nombre": "SAN MIGUEL CHAPULTEPEC 2",
     "direccion": "Av. Libertad #514, San Miguel Chapultepec, C.P. 52240, Edo. De México ",
     "horario": "Miércoles 19:30 hrs ",
     "lider": "Gael Coronado ",
@@ -133,7 +133,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "MEXICALTZINGO ",
+    "nombre": "MEXICALTZINGO",
     "direccion": "Privada Allende S/N, Col. Mazachulco, C.P. 52185, Mexicaltzingo, Edo. De México ",
     "horario": "Miércoles 18:30 hrs ",
     "lider": "Fabiola González",
@@ -145,7 +145,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Fabiola.jpg"
   },
   {
-    "nombre": "INFONAVIT SAN FRANCISCO (METEPEC)",
+    "nombre": "METEPEC",
     "direccion": "Hda. Jaral de Berrio #13, Depto. 13-B, Col. Infonavit San Francisco, C.P.52176, Metepec ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "María de Carmen Jiménez ",
@@ -157,7 +157,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "METEPEC ",
+    "nombre": "METEPEC 2",
     "direccion": "Municipio Chiconcuac #18 A, Col. Izcalli Cuauhtémoc IV, C.P. 52169, Metepec, Edo. De México",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Juan Carlos Hernández ",
@@ -169,7 +169,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/JuanCarlos.jpg"
   },
   {
-    "nombre": "CACALOMACAN ",
+    "nombre": "TOLUCA",
     "direccion": "Independencia #27 Depto. 8, Col. Cacalomacán, C.P. 50265, Toluca, Edo. De México  ",
     "horario": "Miércoles 18:30 hrs ",
     "lider": "Jorge Paz ",
@@ -181,7 +181,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/JorgePaz.jpg"
   },
   {
-    "nombre": "SAN BARTOLO (ALVARO OBREGON)",
+    "nombre": "ALVARO OBREGÓN",
     "direccion": "Comunal #28, Col. Pueblo San Bartolo Ameyalco, C.P. 01800, Alcaldía Álvaro Obregón",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Aaron Espinosa ",
@@ -205,7 +205,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/yoss.jpg"
   },
   {
-    "nombre": "SAN ÁNGEL",
+    "nombre": "ALVARO OBREGÓN 2",
     "direccion": "Michoacán #41, Col. Progreso Tizapán, C.P. 01090, Alcaldía Álvaro Obregón ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Brenda Duperou ",
@@ -217,7 +217,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Brenda.jpg"
   },
   {
-    "nombre": "SAN MATEO ",
+    "nombre": "CUAJIMALPA",
     "direccion": "Emiliano Zapata #65, Col. San Mateo Tlaltenango, C.P. 05600, Alcaldía Cuajimalpa ",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Lorena Martínez",
@@ -229,7 +229,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/lorena.jpg"
   },
   {
-    "nombre": "ZENTLAPATL CUAJIMALPA",
+    "nombre": "CUAJIMALPA 2",
     "direccion": "Camino al Bosque #166, Col. Zentlapatl,     C.P. 05010, Alcaldía Cuajimalpa",
     "horario": "Miércoles 19:30 hrs ",
     "lider": "Alfonso Cervantes ",
@@ -241,7 +241,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Alfonso.jpg"
   },
   {
-    "nombre": "COAHUILA 2 CUAJIMALPA",
+    "nombre": "CUAJIMALPA 3",
     "direccion": "Cda. Coahuila #30, Cond. el Obelisco, Torre Alfa Depto. 22, Col. Cuajimalpa, Alcaldía Cuajimalpa. C.P. 05000 ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Steph",
@@ -253,7 +253,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "U. HAB ALBARRADA IZTAPALAPA",
+    "nombre": "IZTAPALAPA 2",
     "direccion": "Batallones Rojos #205, Edif. 50 Depto 301, Col. Albarrada, C.P. 09240, Alcaldía Iztapalapa ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Miguel Ramírez ",
@@ -265,7 +265,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "C. OCAMPO CUAJIMALPA",
+    "nombre": "CUAJIMALPA 4",
     "direccion": "Prol. Ocampo #235, Col. Cuajimalpa, Alcaldía Cuajimalpa. C.P. 05000",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Josefina Camargo ",
@@ -277,7 +277,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Josefina.jpg"
   },
   {
-    "nombre": "COAHUILA ",
+    "nombre": "CUAJIMALPA 5",
     "direccion": "Coahuila #46 Int. 102B, Col. Cuajimalpa, C.P. 05000, Alcaldía Cuajimalpa ",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Sonia Morales ",
@@ -289,7 +289,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "CUAJIMALPA ",
+    "nombre": "CUAJIMALPA 6",
     "direccion": "Carretera México-Toluca #5636, Col. Lomas de Memetla, C.P. 05330, Alcaldía Cuajimalpa ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Dulce Salazar ",
@@ -301,7 +301,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/LIDERES_7567.jpg"
   },
   {
-    "nombre": "ADOLFO LÓPEZ MATEOS (CUAJIMALPA)",
+    "nombre": "CUAJIMALPA 7",
     "direccion": "1ª cda. Adolfo López Mateos #94, Col. Cuajimalpa, C.P. 05280, Alcaldía Cuajimalpa  ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Isabel Chávez ",
@@ -313,7 +313,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "CUAJIMALPA ",
+    "nombre": "CUAJIMALPA 8 ",
     "direccion": "Av. México #359, Col. Manzanastitla, C.P. 05270, Alcaldía Cuajimalpa ",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Dinorah Zepeda ",
@@ -325,7 +325,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/DinoZepeda.JPG"
   },
   {
-    "nombre": "JESÚS DEL MONTE ",
+    "nombre": "HUIXQUILUCAN",
     "direccion": "Jesús del Monte #47, Residencial Villa Lago, Torre D 102, Col. Jesús del Monte, C.P. 52764, Huixquilucan, Edo. De México ",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Priscilla Ortiz",
@@ -337,7 +337,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Oscar.jpg"
   },
   {
-    "nombre": "MIXCOAC ",
+    "nombre": "BENITO JUÁREZ",
     "direccion": "Tiziano #21, 2º piso local 16, Col. Mixcoac, C.P. 03910, Alcaldía Benito Juárez",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Itzel Solorzano",
@@ -349,7 +349,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Itzel.jpg"
   },
   {
-    "nombre": "PUEBLO DE SANTA FE",
+    "nombre": "ALVARO OBREGÓN 3",
     "direccion": "Av. Vasco de Quiroga #1725, Col. Santa Fe, C.P. 01210, Alcaldía Álvaro Obregón ",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Uriel Fregoso ",
@@ -361,7 +361,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Uriel.jpg"
   },
   {
-    "nombre": "LOMAS",
+    "nombre": "MIGUEL HIDALGO 2",
     "direccion": "Av. Pº. De la Reforma #2693, Col. Lomas de Bezares, C.P. 11910, Alcaldía Miguel Hidalgo ",
     "horario": "Miércoles 20:00 hrs",
     "lider": "Irene González",
@@ -373,7 +373,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Irene.JPG"
   },
   {
-    "nombre": "INTERLOMAS ",
+    "nombre": "HUIXQUILUCAN 2",
     "direccion": "Paseo de Anáhuac #10, Col. Paseo de las Palmas, C.P. 52787, Huixquilucan ",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Regina Jiménez   ",
@@ -385,7 +385,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Regina.jpg"
   },
   {
-    "nombre": "CENTRAL PARK INTERLOMAS ",
+    "nombre": "HUIXQUILUCAN 3",
     "direccion": "Vía Magna #6, Col. Lomas de las Palmas, Central Park Interlomas, C.P. 52787, Huixquilucan",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Velia Bolaños ",
@@ -397,7 +397,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "CHABACANO ",
+    "nombre": "CUAUHTÉMOC",
     "direccion": "San Francisco Tultengo #286, Ed D 303, Col. Paulino Navarro, Alcaldía Cuauhtémoc, C.P. 06870",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Eumir Pérez",
@@ -409,7 +409,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Eumir.jpg"
   },
   {
-    "nombre": "NUEVA TENOCHTITLÁN G.A.M.  ",
+    "nombre": "GUSTAVO A. MADERO 3",
     "direccion": "Oriente 91 #4015, Col. Nueva Tenochtitlan, C.P. 07890, Alcaldía Gustavo A. Madero ",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Mayela Díaz ",
@@ -421,7 +421,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Agustina.jpg"
   },
   {
-    "nombre": "EX-HIPÓDROMO PERALVILLO ",
+    "nombre": "CUAUHTÉMOC 2",
     "direccion": "Ricardo Bel #26, Col. Ex-hipódromo de Peralvillo, C.P. 06250, Alcaldía Cuauhtémoc ",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Eva Martínez ",
@@ -445,7 +445,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Lidia.jpg"
   },
   {
-    "nombre": "GUSTAVO A. MADERO ",
+    "nombre": "GUSTAVO A. MADERO 2",
     "direccion": "Norte 72-A #6408, Col. Gertrudis Sánchez, C.P. 07830, Alcaldía Gustavo A. Madero ",
     "horario": "Sábado 11:00 hrs",
     "lider": "Jacobo Sánchez ",
@@ -457,7 +457,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/jacoco.jpg"
   },
   {
-    "nombre": "ECATEPEC ",
+    "nombre": "TLALNEPANTLA",
     "direccion": "Amapola lote 5, Col. San Juan Ixhuatepec, C.P. 54180, Tlalnepantla, Edo. De México ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Axel Delgado ",
@@ -469,7 +469,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "SATÉLITE",
+    "nombre": "NAUCALPAN",
     "direccion": "Circuito Circunvalación Poniente #29, Ciudad Satélite, C.P. 53100, Naucalpan ",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Daniela Morales ",
@@ -481,7 +481,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Daniela.jpg"
   },
   {
-    "nombre": "RIBERA TOWER",
+    "nombre": "CIUDAD LÓPEZ MATEOS",
     "direccion": "Cond. Ribera Tower and Houses, Casa 32B, Col. La Estadia, C.P. 52930, Ciudad López Mateos, Edo. De México ",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Luis Espericueta ",
@@ -505,7 +505,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Olivia.jpg"
   },
   {
-    "nombre": "VISTA ESMERALDA ",
+    "nombre": "ATIZAPÁN DE ZARAGOZA 2",
     "direccion": "Puerta Marbella #20, Fracc. Vista Esmeralda, Col. Bosque Esmeralda, C.P. 52930, Atizapán de Zaragoza, Edo. De México",
     "horario": "Miércoles 20:00 hrs ",
     "lider": "Mónica Vargas ",
@@ -517,7 +517,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Monica.JPG"
   },
   {
-    "nombre": "SAYAVEDRA (ATIZAPAN)",
+    "nombre": "ATIZAPÁN DE ZARAGOZA 3",
     "direccion": "Blvd. De la Torre # 6, Condado de Sayavedra, C.P. 52938, Atizapán de Zaragoza, Edo. De México ",
     "horario": "Miércoles 20:00 hrs",
     "lider": "Emiliano Rodríguez ",
@@ -538,7 +538,7 @@
     "colider_dos": "",
     "lat": 19.804452705131197,
     "lng": -98.92661490365217,
-    "img": "https://storage.googleapis.com/fotos_cdpp/Miriam.jpg"
+    "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
     "nombre": "TIZAYUCA ",
@@ -553,7 +553,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "TOLUCA",
+    "nombre": "TOLUCA 2",
     "direccion": "Presa de Tingambato # 108, Col. Com. Federal de Electricidad, C.P. 50150, Toluca",
     "horario": "Miércoles 18:00 hrs ",
     "lider": "Jahaziel Paz ",
@@ -565,7 +565,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/jahaz.jpg"
   },
   {
-    "nombre": "TENANGO DEL VALLE ",
+    "nombre": "TENANGO DEL VALLE 4 ",
     "direccion": "Calle Cedros #102, Colonia del Bosque, C.P. 52300, Tenango del Valle, Edo. De México ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Berenice Alonso  ",
@@ -577,7 +577,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Guadalupe.jpg"
   },
   {
-    "nombre": "MEXICALTZINGO ",
+    "nombre": "MEXICALTZINGO 2 ",
     "direccion": "Insurgentes #214, Colonia Azcapotzalco, C.P. 52183, Mexicaltzingo, Edo. De México",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Cari Valdez  ",
@@ -589,7 +589,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Kari.jpg"
   },
   {
-    "nombre": "IZTAPALAPA",
+    "nombre": "IZTAPALAPA 3",
     "direccion": "Cda. Huecampool Mz. 35 Lt. 47, Colonia Lomas de la estancia, C.P. 09640, Alcaldía Iztapalapa ",
     "horario": "Miércoles 19:00 hrs ",
     "lider": "América Torres ",
@@ -601,7 +601,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/America.jpg"
   },
   {
-    "nombre": "METEPEC ",
+    "nombre": "METEPEC 3 ",
     "direccion": "Arenque # 7B, Col. Infonavit Las Marinas, C.P. 52176, Metepec, Edo. De México ",
     "horario": "Miércoles 18:00 hrs ",
     "lider": "Miriam Ramírez   ",
@@ -613,7 +613,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Miriam.jpg"
   },
   {
-    "nombre": "MEXICALTZINGO ",
+    "nombre": "MEXICALTZINGO 3 ",
     "direccion": "Privada de Preciliano Díaz, Int. , Col. Azcapotzalco, C.P. 52183, Mexicaltzingo, Edo. De México  ",
     "horario": "Miércoles 19:30 hrs ",
     "lider": "Maribel Garduño ",
@@ -625,7 +625,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Maribel.jpg"
   },
   {
-    "nombre": "SAUCES I             TOLUCA",
+    "nombre": "TOLUCA 3",
     "direccion": "Av. Encinos Mz. 19 Lt. 9, Casa 101-A, Col. Sauces I, C.P. 50210, Toluca, Edo. De México ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Pamela Medrano ",
@@ -633,7 +633,6 @@
     "colider_uno": "Reyna Mejía ",
     "colider_dos": "",
     "lat": 19.357269068285156,
-
     "lng": -99.59614750031523,
     "img": "https://storage.googleapis.com/fotos_cdpp/Pamela.jpg"
   },
@@ -650,7 +649,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/Jesus.jpg"
   },
   {
-    "nombre": "TENANGO DEL VALLE (SAN MARTÍN)",
+    "nombre": "TENANGO DEL VALLE 5",
     "direccion": "Blvr. Narciso Bassols #210, Col. San Martín, C.P. 52300. Tenango del Valle, Edo. De México ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Sergio Mendoza ",
@@ -663,7 +662,7 @@
   },
   {
     "nombre": "TONÁTICO ",
-    "direccion": "Matamoros #13, Col. , C.P. 51950, Tonatico, Edo. De México ",
+    "direccion": "Matamoros #13, Col. , C.P. 51950, Tonático, Edo. De México ",
     "horario": "Miércoles 20:00 hrs",
     "lider": "Vladimiro Aguirre",
     "telefono": "55-28-01-61-56",
@@ -674,7 +673,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "IZTAPALAPA PARAJE ZACATEPEC",
+    "nombre": "IZTAPALAPA 4 ",
     "direccion": "Cda de Morelos #37, Int. 2, Col. Paraje Zacatepec, C.P. 09560, Alcaldía Iztapalapa ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Mayela Ramírez ",
@@ -686,7 +685,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "METEPEC LA PILA ",
+    "nombre": "METEPEC 4",
     "direccion": "Priv. La quinta Mz 15 Lt. 6, Edif. 1, Col. Andrés Molina Enríquez, C.P. 52149, Metepec, Edo. De México ",
     "horario": "Miércoles 20:00 hrs",
     "lider": "Eleuteria Hernández",
@@ -699,7 +698,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "CACALOTE (JESÚS DEL MONTE II)",
+    "nombre": "CUAJIMALPA 9",
     "direccion": "2ª Cda. Federico García Lorca Casa 26, Col. Jesús del Monte, C.P. 05260, Alcaldía Cuajimalpa ",
     "horario": "Miércoles 19:30 hrs",
     "lider": "Jazmín Narciso ",
@@ -711,7 +710,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "LA CAMPESINA (TENANGO DEL VALLE)",
+    "nombre": "TENANGO DEL VALLE 6",
     "direccion": "2ª Cda. De David Alfaro Siqueiros S/N, Col. La Campesina, C.P. 52300, Tenango del Valle ",
     "horario": "Miércoles 18:45 hrs ",
     "lider": "Deyanira Cruz ",
@@ -723,7 +722,7 @@
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
   {
-    "nombre": "EL CALVARIO ZENTLAPATL",
+    "nombre": "CUAJIMALPA 10",
     "direccion": "Cda. Del Calvario # 7 prov., Col. Zentlapatl, C.P. 05010, Alcaldía Cuajimalpa ",
     "horario": "Miércoles 19:00 hrs",
     "lider": "Ricardo Moreno ",
