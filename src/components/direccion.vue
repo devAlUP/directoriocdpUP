@@ -87,11 +87,11 @@ onMounted(async () => {
 <template>
   <div class="buscar">
     <div class="buscar-text">
-      <h5 class="text-light notif">Para continuar, necesitamos acceder tu ubicación:</h5>
+      <h5 class="text-light notif">Para continuar, necesitamos acceder a tu ubicación:</h5>
       <button class="buscarAuto" @click="geolocalizacion_automatica">
-        Encontrar mi ubicación automaticamente
+        ENCONTAR MI UBICACIÓN AUTOMÁTICAMENTE
       </button>
-      <h5 class="text-light">Escribe tu dirección:</h5>
+      <h5 class="text-light">O <br />Escribe tu dirección:</h5>
       <div class="input-group input-space">
         <input
           type="text"
