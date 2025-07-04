@@ -60,6 +60,9 @@
   z-index: 5;
   margin-left: 1rem;
 }
+p {
+  margin-left: 3px;
+}
 @media (max-width: 1024px) {
   .c-font {
     position: fixed;

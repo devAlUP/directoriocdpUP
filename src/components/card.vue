@@ -55,21 +55,21 @@ setTimeout(() => {
         <p class="text-light">{{ storeCard.dataCard.direccion }}</p>
 
         <div class="datos-card">
-          <h5 class="text-light">Horario</h5>
-          <p class="text-light">: {{ storeCard.dataCard.horario }}</p>
+          <h5 class="text-light">Horario:</h5>
+          <p class="text-light">{{ storeCard.dataCard.horario }}</p>
         </div>
         <div class="datos-card" v-if="storeCard.dataCard.lider != 'Joel Irazabal'">
-          <h5 class="text-light" style="margin-right: 4px">Líder</h5>
-          <p class="text-light">: {{ storeCard.dataCard.lider }}</p>
+          <h5 class="text-light" style="margin-right: 4px">Líder:</h5>
+          <p class="text-light">{{ storeCard.dataCard.lider }}</p>
         </div>
 
         <div class="datos-card" v-if="storeCard.dataCard.colider != 'n/a'">
-          <h5 class="text-light">ColÍder</h5>
-          <p class="text-light">: {{ storeCard.dataCard.colider }}</p>
+          <h5 class="text-light">ColÍder:</h5>
+          <p class="text-light">{{ storeCard.dataCard.colider }}</p>
         </div>
         <div class="datos-card">
-          <h5 class="text-light">Teléfono</h5>
-          <p class="text-light">: {{ storeCard.dataCard.telefono }}</p>
+          <h5 class="text-light">Teléfono:</h5>
+          <p class="text-light">{{ storeCard.dataCard.telefono }}</p>
         </div>
       </div>
       <button
