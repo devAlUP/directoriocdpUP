@@ -147,7 +147,7 @@ onMounted(async () => {
       <div class="datos">
         <h5 class="text-light">{{ index.nombre }}</h5>
         <p class="text-light">Dirección {{ index.direccion }}</p>
-        <p @click="Unhide(index)" class="text-info">Ver mas</p>
+        <button @click="Unhide(index)" class="">Ver mas</button>
       </div>
     </div>
   </div>

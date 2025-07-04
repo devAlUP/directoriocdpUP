@@ -18,9 +18,10 @@ section {
 }
 
 img {
-  margin-top: 15vh;
+  margin-top: 10vh;
   width: 33vw;
-  margin-left: 10vw;
+  height: 33vw;
+  margin-left: 5vw;
 }
 .carruzel2 {
   width: 200%;
@@ -32,37 +33,54 @@ img {
 }
 .vistauno {
   width: 50%;
+
   display: flex;
   flex-direction: row;
   overflow-y: hidden;
 }
 .vistados {
-  width: 50%;
+  width: 50vw;
   overflow-y: hidden;
 }
+.desktop {
+  width: 50vw;
+  padding-left: 5vw;
+}
 .titulo {
-  margin-top: 10vh;
+  width: 40vw;
+  margin-left: 5%;
+  margin-top: 20vh;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 25vh;
+  font-size: 20vh;
   background: linear-gradient(100deg, #ffa200, #ba5ec4, #5e6ac4, #5ec46f);
   line-height: 0.9;
-  margin-left: 0.5rem;
+
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 button {
-  width: 33vw;
+  width: 25%;
+  margin-left: 10%;
+  margin-top: -1000%;
+
   background-color: transparent;
   color: white;
   border-color: white;
   border-radius: 10px;
   font-size: 3vh;
   height: 5vh;
-  margin-left: 10vw;
+
   font-family: 'Bebas Neue', sans-serif;
 }
 button img {
   display: none;
+}
+.descripcion {
+  font-size: 3vh;
+  margin-top: 30vh;
+  text-align: justify;
+  width: 40vw;
+  margin-left: vw;
 }
 @media (max-width: 1024px) {
   h5 {
@@ -102,6 +120,8 @@ button img {
     width: 50%;
   }
   .titulo {
+    margin-top: 10vh;
+    width: 80vw;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20vw;
     background: linear-gradient(100deg, #ffa200, #ba5ec4, #5e6ac4, #5ec46f);
@@ -111,20 +131,24 @@ button img {
     -webkit-background-clip: text;
   }
   button {
-    width: 30%;
+    width: 40%;
     background-color: transparent;
-    color: white;
+
     border-color: white;
-    border-radius: 10px;
+
     font-size: 3vh;
     margin-left: 35%;
     font-family: 'Bebas Neue', sans-serif;
   }
   .desktop {
     display: flex;
+    flex-direction: column;
+    width: 100vw;
   }
   .descripcion {
-    margin-top: 3vh;
+    font-size: 2vh;
+    margin-top: 3rem;
+    position: static;
     width: 90vw;
     text-align: justify;
     margin-left: 5vw;

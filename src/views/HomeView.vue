@@ -22,16 +22,14 @@ const moveCarruzel = () => {
   <section>
     <div :class="[direccionStatus.showMap == false ? 'carruzel' : 'carruzel2']">
       <div class="vistauno">
-        <p class="titulo">
-          ENCUENTRA <br />TU CASA DE <br />
-          PAZ
-        </p>
         <div class="desktop">
-          <img src="../assets/titulo.png" alt="" />
-          <button @click="moveCarruzel()">
-            <img class="but" src="../assets/titulo.png" alt="" />Iniciar
-          </button>
+          <p class="titulo">
+            ENCUENTRA <br />TU CASA DE <br />
+            PAZ
+            <button @click="moveCarruzel()">Iniciar</button>
+          </p>
         </div>
+
         <p class="text-light descripcion">
           Son lugares fuera de la iglesia, distribuidos por toda la CDMX, área metropolitana y otros
           estados del país, donde las personas se reúnen una vez por semana para orar por sus
@@ -42,7 +40,7 @@ const moveCarruzel = () => {
           reino.
         </p>
       </div>
-      <div class="vistados bg-dark">
+      <div class="vistados">
         <mapView
           v-if="direccionStatus.lat != 0 && direccionStatus.lng != 0"
           :lat="direccionStatus.lat"

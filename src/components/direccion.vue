@@ -6,8 +6,8 @@ const autocompleteInput = ref(null)
 const direccionStatus = useLatLng()
 const VITE_Maps_API_KEY = 'AIzaSyBky4Bi1jZxJNgpXYmKMx - SQB80InwgT9w' // O tu clave directamente
 const direccion = ref('')
-const lat = ref()
-const lng = ref()
+const lat = ref('')
+const lng = ref('')
 
 const geolocalizacion_automatica = () => {
   if (navigator.geolocation) {
@@ -38,10 +38,13 @@ const geolocalizacion_automatica = () => {
 
 const useSetLatLNG = (lt, lg) => {
   console.log(lt, lg)
-
-  direccionStatus.setLatLng(lt, lg)
-  direccionStatus.swichtStatus(false)
-  direccionStatus.swichtStatusViewMap()
+  if (lt == '' && lg == '') {
+    alert('Para continuar Debes ingresar tu direccioón')
+  } else {
+    direccionStatus.setLatLng(lt, lg)
+    direccionStatus.swichtStatus(false)
+    direccionStatus.swichtStatusViewMap()
+  }
 }
 
 const app = getCurrentInstance()
@@ -83,10 +86,10 @@ onMounted(async () => {
 </script>
 <template>
   <div class="buscar">
-    <div class="buscar-text bg-dark">
-      <h5 class="text-light notif">Para continuar, necesitamos acceder tu ubicacion</h5>
-      <button class="btn btn-warning buscarAuto" @click="geolocalizacion_automatica">
-        Encontrar mi ubicacion automaticamente
+    <div class="buscar-text">
+      <h5 class="text-light notif">Para continuar, necesitamos acceder tu ubicación:</h5>
+      <button class="buscarAuto" @click="geolocalizacion_automatica">
+        Encontrar mi ubicación automaticamente
       </button>
       <h5 class="text-light">Escribe tu dirección:</h5>
       <div class="input-group input-space">
@@ -102,9 +105,7 @@ onMounted(async () => {
 
       <!----<p class="text-light">la direccion que elegiste es: <br />{{ direccion }}</p>-->
 
-      <button type="button" class="btn btn-success buttonbuscar" @click="useSetLatLNG(lat, lng)">
-        Aceptar
-      </button>
+      <button type="button" class="buttonbuscar" @click="useSetLatLNG(lat, lng)">Aceptar</button>
     </div>
   </div>
 </template>

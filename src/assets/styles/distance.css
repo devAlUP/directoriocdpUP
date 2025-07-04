@@ -22,7 +22,13 @@ h3 {
   margin-right: 1.5vw;
 }
 p {
-  margin-left: 2.5vw;
+  margin-left: 1vw;
+}
+button {
+  color: white;
+  border-color: white;
+  background-color: transparent;
+  border-radius: 5px;
 }
 
 @media (max-width: 1024px) {
@@ -49,5 +55,11 @@ p {
   p {
     line-height: 1;
     margin-bottom: 0.5;
+  }
+  button {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+    border-radius: 5px;
   }
 }

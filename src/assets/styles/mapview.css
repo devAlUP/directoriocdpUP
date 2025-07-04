@@ -14,6 +14,7 @@ section {
   width: 40vw;
   height: 40vw;
   margin-left: 4vw;
+  background-color: gray;
 }
 
 @media (max-width: 1024px) {

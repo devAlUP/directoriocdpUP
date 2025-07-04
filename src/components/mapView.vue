@@ -17,6 +17,15 @@ const Unhide = (data) => {
   storeCard.swichtStatus(true)
   console.log(storeCard.statusCard)
 }
+const mapStyles = ref([
+  {
+    featureType: 'road',
+    elementType: 'geometry.fill',
+    stylers: [
+      { color: '#000000' }, // Verde claro
+    ],
+  },
+])
 
 console.log(cdpdir.value)
 </script>
@@ -29,6 +38,7 @@ console.log(cdpdir.value)
         class="map"
         :center="center"
         :zoom="12"
+        :styles="mapStyles"
       >
         <CustomMarker :options="markerOptions">
           <div style="text-align: center">

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .buscar {
   position: fixed;
   top: 0;
@@ -9,10 +10,11 @@
 }
 .buscar-text {
   width: 50vw;
-
+  border-radius: 10px;
   margin-top: 25vh;
   margin-left: 25vw;
-  border-radius: 5%;
+  background-color: black;
+
   border-color: white;
   margin-bottom: 1rem;
 }
@@ -30,13 +32,27 @@ p {
 }
 .buttonbuscar {
   width: 20%;
+  margin-top: 2rem;
   margin-left: 40%;
   margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  padding: 1vh;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2vh;
 }
 .buscarAuto {
   width: 40%;
+  padding: 1vh;
   margin-left: 30%;
   margin-bottom: 1rem;
+  color: white;
+  background-color: transparent;
+  border-color: white;
+  border-radius: 10px;
+  font-family: 'Bebas Neue', sans-serif;
 }
 .notif {
   text-align: center;
@@ -59,10 +75,11 @@ h5 {
   }
   .buscar-text {
     width: 96vw;
+    color: black;
 
     margin-top: 25vh;
     margin-left: 2vw;
-    border-radius: 5%;
+
     border-color: white;
   }
   .buscar-text h4 {
@@ -92,8 +109,8 @@ h5 {
     text-align: center;
   }
   .buttonbuscar {
-    width: 20%;
-    margin-left: 40%;
+    width: 30%;
+    margin-left: 35%;
     margin-bottom: 1rem;
   }
 }
