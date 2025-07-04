@@ -40,7 +40,7 @@ img {
   width: 50%;
   overflow-y: hidden;
 }
-p {
+.titulo {
   margin-top: 15vh;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 25vh;
@@ -101,7 +101,7 @@ button img {
   .vistados {
     width: 50%;
   }
-  p {
+  .titulo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 25vw;
     background: linear-gradient(100deg, #ffa200, #ba5ec4, #5e6ac4, #5ec46f);
@@ -122,5 +122,11 @@ button img {
   }
   .desktop {
     display: flex;
+  }
+  .descripcion {
+    margin-top: 3vh;
+    width: 90vw;
+    text-align: justify;
+    margin-left: 5vw;
   }
 }

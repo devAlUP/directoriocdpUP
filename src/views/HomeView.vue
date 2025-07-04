@@ -22,7 +22,7 @@ const moveCarruzel = () => {
   <section>
     <div :class="[direccionStatus.showMap == false ? 'carruzel' : 'carruzel2']">
       <div class="vistauno">
-        <p>
+        <p class="titulo">
           ENCUENTRA <br />TU CASA DE <br />
           PAZ
         </p>
@@ -32,6 +32,15 @@ const moveCarruzel = () => {
             <img class="but" src="../assets/titulo.png" alt="" />Iniciar
           </button>
         </div>
+        <p class="text-light descripcion">
+          Son lugares fuera de la iglesia, distribuidos por toda la CDMX, área metropolitana y otros
+          estados del país, donde las personas se reúnen una vez por semana para orar por sus
+          necesidades, aprender de Dios y hacer comunidad.<br />
+          Es un lugar donde la misma unción, el poder sobrenatural y la presencia de Dios se
+          experimentan con tanta fuerza como en la iglesia. <br />Cada Casa de Paz se abre para
+          recibir a vecinos, familiares y amigos, con el propósito de compartir el evangelio del
+          reino.
+        </p>
       </div>
       <div class="vistados bg-dark">
         <mapView
