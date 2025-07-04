@@ -39,7 +39,7 @@ const geolocalizacion_automatica = () => {
 const useSetLatLNG = (lt, lg) => {
   console.log(lt, lg)
   if (lt == '' && lg == '') {
-    alert('Para continuar Debes ingresar tu direccioón')
+    alert('Para continuar Debes ingresar tu dirección')
   } else {
     direccionStatus.setLatLng(lt, lg)
     direccionStatus.swichtStatus(false)
