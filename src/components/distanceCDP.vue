@@ -142,7 +142,7 @@ onMounted(async () => {
 <template>
   <div class="contenedor">
     <h3 class="text-light" @click="calcularDistancia()">Te recomendamos:</h3>
-    <div class="caja-recomendacion" v-for="(index, i) in cdpCercana">
+    <div class="caja-recomendacion" v-for="(index, i) in cdpCercana" @click="Unhide(index)">
       <img :src="index.img" alt="" />
       <div class="datos">
         <h5 class="text-light">{{ index.nombre }}</h5>
