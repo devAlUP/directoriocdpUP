@@ -118,6 +118,7 @@ button img {
   }
   .vistados {
     width: 50%;
+    overflow-y: scroll;
   }
   .titulo {
     margin-top: 10vh;
