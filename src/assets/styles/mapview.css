@@ -21,7 +21,6 @@ section {
   section {
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
   }
   .p_uno {
     width: 100%;

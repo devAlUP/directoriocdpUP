@@ -40,7 +40,9 @@ button {
   }
   .caja-recomendacion {
     width: 95vw;
-    margin: 2.5vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5w;
+    margin-bottom: 1vw;
     background-color: black;
     display: flex;
     flex-direction: row;
