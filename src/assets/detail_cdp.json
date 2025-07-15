@@ -744,5 +744,17 @@
     "lat": 1,
     "lng": -16,
     "img": "https://storage.googleapis.com/fotos_cdpp/2023.06.04_LIDERES0619.jpg"
+  },
+  {
+    "nombre": "ECATEPEC",
+    "direccion": "Av. Miguel Hidalgo, #743 lt. 5 Col jardines de Morelos C.P. 55070, Ecatepec de Morelos, Edo. De México ",
+    "horario": " Miércoles 19:30 hrs",
+    "lider": " Abraham Guerrero",
+    "telefono": " 5628180965",
+    "colider_uno": "Monica Gallegos ",
+    "colider_dos": "n/a",
+    "lat": 19.599934835307558,
+    "lng": -99.002703933119,
+    "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   }
 ]
