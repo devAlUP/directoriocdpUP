@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background-color: rgba(73, 64, 64, 0.649);
   z-index: 1;
 }
@@ -69,7 +69,7 @@ p {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-color: rgba(73, 64, 64, 0.649);
 
     z-index: 1;
