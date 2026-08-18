@@ -3,9 +3,10 @@ import { useCardStatus } from '@/store/hideUnhideCard'
 const storeCard = useCardStatus()
 import { Loader } from '@googlemaps/js-api-loader'
 
-import cdp from '../assets/detail_cdp.json'
+import { useStoreCDP } from '@/store/Negocio/StoreCDP'
+const CasasDePaz = useStoreCDP()
 import { ref, onMounted, getCurrentInstance } from 'vue'
-const cdpdir = ref(cdp)
+const cdpdir = ref(CasasDePaz.CasasDePaz)
 import { useLatLng } from '@/store/latLngState'
 
 const direccionStatus = useLatLng()
@@ -26,114 +27,96 @@ const Unhide = (data) => {
 }
 
 ////funcion de calculo de distancias
-const calcularDistancia = async () => {
-  console.log(direccionStatus.lat, direccionStatus.lng)
+const getHaversineMeters = (lat1, lon1, lat2, lon2) => {
+  const R = 6371e3
+  const φ1 = (lat1 * Math.PI) / 180
+  const φ2 = (lat2 * Math.PI) / 180
+  const Δφ = ((lat2 - lat1) * Math.PI) / 180
+  const Δλ = ((lon2 - lon1) * Math.PI) / 180
+
+  const a =
+    Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+    Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2)
+
+  return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)))
+}
+
+const calcularDistanciaHibrida = async () => {
+  if (!cdpdir.value || cdpdir.value.length === 0) return
+
+  const originLat = parseFloat(direccionStatus.lat)
+  const originLng = parseFloat(direccionStatus.lng)
+
+  // 1. Filtrar localmente las 5 mejores opciones según distancia en línea recta
+  const candidatasLocal = cdpdir.value
+    .map((cdp) => ({
+      ...cdp,
+      distanciaAprox: getHaversineMeters(
+        originLat,
+        originLng,
+        parseFloat(cdp.lat),
+        parseFloat(cdp.lng),
+      ),
+    }))
+    .sort((a, b) => a.distanciaAprox - b.distanciaAprox)
+    .slice(0, 5) // Tomamos solo las 5 más cercanas
 
   try {
     await $googleMapsLoader.load()
-
-    ///inicio de calculo
     const service = new window.google.maps.DistanceMatrixService()
-    const distancePromises = []
-    for (let index = 0; index < cdpdir.value.length; index++) {
-      const promise = new Promise((resolve, reject) => {
-        service.getDistanceMatrix(
-          {
-            origins: [{ lat: direccionStatus.lat, lng: direccionStatus.lng }], // Orígenes (pueden ser múltiples)
-            destinations: [cdpdir.value[index]], // Destinos (pueden ser múltiples)
-            travelMode: 'WALKING', // Modo de viaje (DRIVING, WALKING, BICYCLING, TRANSIT)
-            unitSystem: window.google.maps.UnitSystem.METRIC, // O IMPERIAL
-            avoidHighways: false,
-            avoidTolls: false,
-          },
-          (response, status) => {
-            distanciaInfo.value.push(response)
-            if (status === 'OK') {
-              resolve({ response, cdpData: cdpdir.value[index], originalIndex: index }) // Resuelve con la respuesta y los datos originales de la CDP
-            } else {
-              reject(
-                new Error(
-                  `Error en getDistanceMatrix para ${cdpdir.value[index].nombre || index}: ${status}`,
-                ),
-              )
+
+    const destinos = candidatasLocal.map((item) => ({
+      lat: parseFloat(item.lat),
+      lng: parseFloat(item.lng),
+    }))
+
+    // 2. Una sola llamada limpia de 5 elementos a Google Maps
+    service.getDistanceMatrix(
+      {
+        origins: [{ lat: originLat, lng: originLng }],
+        destinations: destinos,
+        travelMode: 'WALKING',
+        unitSystem: window.google.maps.UnitSystem.METRIC,
+      },
+      (response, status) => {
+        if (status === 'OK' && response.rows[0]?.elements) {
+          const elements = response.rows[0].elements
+          const dists = []
+
+          elements.forEach((element, index) => {
+            const cdpData = candidatasLocal[index]
+            if (element.status === 'OK') {
+              dists.push({
+                distance: element.distance.value, // Metros reales caminando
+                distanciaTexto: element.distance.text,
+                nombre: cdpData.nombre,
+                direccion_completa: cdpData.direccion_completa,
+                lider_nombre: cdpData.lider_nombre,
+                telefono: cdpData.telefono,
+                colider_1_nombre: cdpData.colider_1_nombre,
+                colider_2_nombre: cdpData.colider_2_nombre,
+                horario: cdpData.horario,
+                lat: parseFloat(cdpData.lat),
+                lng: parseFloat(cdpData.lng),
+                img: cdpData.img,
+              })
             }
-          },
-        )
-      })
-      // Agrega la promesa al array
-      distancePromises.push(promise)
-    }
-    const allResponses = await Promise.all(distancePromises)
-    let dists = [] // Este será el array con los datos limpios y procesados
+          })
 
-    allResponses.forEach(({ response, cdpData, originalIndex }) => {
-      distanciaInfo.value.push(response) // Si quieres guardar las respuestas crudas de la API
-
-      const element = response.rows[0]
-      if (
-        element &&
-        element.elements &&
-        element.elements[0] &&
-        element.elements[0].status === 'OK'
-      ) {
-        let distancia = element.elements[0].distance.text
-        if (distancia.indexOf('km') != -1) {
-          distancia = distancia.replace('km', '').replace('m', '').replaceAll(' ', '') // Quitar 'm' también si es el caso
-          distancia = parseFloat(distancia)
-          distancia = distancia * 1000
-        } else {
-          distancia = distancia.replace('km', '').replace('m', '').replaceAll(' ', '') // Quitar 'm' también si es el caso
-          distancia = parseFloat(distancia)
+          dists.sort((a, b) => a.distance - b.distance)
+          cdpCercana.value = dists.slice(0, 3)
         }
-        dists.push({
-          distance: distancia,
-          nombre: cdpData.nombre, // Usar cdpData que pasamos en la promesa
-          direccion: cdpData.direccion,
-          lider: cdpData.lider,
-          telefono: cdpData.telefono,
-          colider_uno: cdpData.colider_uno,
-          colider_dos: cdpData.colider_dos, // Asegurar que existan
-          horario: cdpData.horario,
-          lat: cdpData.lat,
-          lng: cdpData.lng,
-          img: cdpData.img,
-        })
-      } else {
-        // Manejar casos donde el estado no es OK (ej. NOT_FOUND, ZERO_RESULTS)
-        console.warn(
-          `No se pudo obtener la distancia para ${cdpData.nombre || 'CDP' + originalIndex}. Estado: ${element?.elements[0]?.status || 'N/A'}`,
-        )
-        dists.push({
-          distance: 1000000, // Un valor muy alto para indicar que está lejos o inaccesible
-          nombre: cdpData.nombre,
-          direccion: cdpData.direccion,
-          lider: cdpData.lider,
-          telefono: cdpData.telefono,
-          colider_uno: cdpData.colider_uno,
-          colider_dos: cdpData.colider_dos,
-          horario: cdpData.horario,
-          lat: cdpData.lat,
-          lng: cdpData.lng,
-          status: element?.elements[0]?.status || 'ERROR', // Para depuración
-          img: cdpData.img,
-        })
-      }
-    })
-
-    dists.sort((a, b) => a.distance - b.distance)
-    cdpCercana.value = dists.slice(0, 3)
-
-    console.log(dists)
-    console.log(cdpCercana.value)
+      },
+    )
   } catch (e) {
-    error.value = 'Error al cargar la API de Google Maps: ' + e
+    console.error('Error:', e)
   }
 }
 onMounted(async () => {
   if ((direccionStatus.lat == 0, direccionStatus.lng == 0)) {
     console.log('no se han encontrado los datos', direccionStatus.lng)
   } else {
-    calcularDistancia()
+    calcularDistanciaHibrida()
   }
 
   // console.log(cdpdir.value)
@@ -142,13 +125,39 @@ onMounted(async () => {
 <template>
   <div class="contenedor">
     <h3 class="text-light" @click="calcularDistancia()">Te recomendamos:</h3>
-    <div class="caja-recomendacion" v-for="(index, i) in cdpCercana" @click="Unhide(index)">
-      <img :src="index.img" alt="" />
-      <div class="datos">
-        <h5 class="text-light">{{ index.nombre }}</h5>
-        <p class="text-light">Dirección {{ index.direccion }}</p>
-        <button @click="Unhide(index)" class="">Ver mas</button>
+    <div class="carrusel-tarjetas">
+      <div class="caja-recomendacion" v-for="(cdp, i) in cdpCercana" @click="Unhide(cdp)">
+        <div class="header-tarjeta">
+          <span
+            class="badge-medalla"
+            :class="{
+              'medalla-oro': i === 0,
+              'medalla-plata': i === 1,
+              'medalla-bronce': i === 2,
+            }"
+          >
+            #{{ i + 1 }}
+          </span>
+          <h5 class="nombre-cdp">{{ cdp.nombre }}</h5>
+        </div>
+        <div class="componetes-tarjeta">
+          <div class="img-container">
+            <img :src="cdp.img" :alt="cdp.nombre" />
+          </div>
+
+          <div class="datos">
+            <p class="direccion-cdp"><strong>Dirección:</strong> {{ cdp.direccion_completa }}</p>
+            <p class="direccion-cdp">
+              <strong>Distancia aproximada:</strong> {{ cdp.distance }} metros
+            </p>
+          </div>
+        </div>
+        <button type="button" class="btn btn-dark">Ver más <i class="bi bi-three-dots"></i></button>
       </div>
+    </div>
+    <div class="brand-iglesia">
+      <img src="/titulo.png" alt="Logo Iglesia" class="logo-img" />
+      <span class="nombre-iglesia">UN PROPÓSITO</span>
     </div>
   </div>
 </template>

@@ -10,11 +10,44 @@ section {
   width: 50vw;
 }
 .map {
-  margin-top: 4vw;
-  width: 40vw;
-  height: 40vw;
+  margin-top: 2vw;
+  width: 38vw;
+  height: 38vw;
   margin-left: 4vw;
   background-color: gray;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+
+  border-radius: 20px; /* Ajusta el radio que prefieras */
+  overflow: hidden; /* ¡IMPORTANTE! Corta las esquinas del mapa interno de Google */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Opcional: sombra elegante */
+}
+.mapa-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  padding-top: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.mapa-titulo {
+  color: #ffffff;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.mapa-subtitulo {
+  color: #888888;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  margin-left: 0.8rem;
 }
 
 @media (max-width: 1024px) {
@@ -35,6 +68,10 @@ section {
     width: 90vw;
     height: 90vw;
     margin-left: 5vw;
+
+    border-radius: 20px; /* Ajusta el radio que prefieras */
+    overflow: hidden; /* ¡IMPORTANTE! Corta las esquinas del mapa interno de Google */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Opcional: sombra elegante */
   }
 
   .buscar {
@@ -60,5 +97,33 @@ section {
   .input-space {
     width: 80%;
     margin-left: 10%;
+  }
+
+  .mapa-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    padding-top: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+  }
+
+  .mapa-titulo {
+    color: #ffffff;
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .mapa-subtitulo {
+    color: #888888;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    margin-left: 0.8rem;
   }
 }

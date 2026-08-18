@@ -1,44 +1,85 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { GoogleMap, MarkerCluster, CustomMarker } from 'vue3-google-map'
-import cdp from '../assets/detail_cdp.json'
+//componentes
+import direccion from './direccion.vue'
 import card from './card.vue'
 import distanceCDP from './distanceCDP.vue'
+//stores
 import { useCardStatus } from '@/store/hideUnhideCard'
-import { useLatLng } from '@/store/latLngState'
-const props = defineProps(['lat', 'lng'])
-const center = ref({ lat: props.lat, lng: props.lng })
-const markerOptions = ref({ position: center.value, title: 'mi ubicacion' })
-const cdpdir = ref(cdp)
 const storeCard = useCardStatus()
-const direccionStatus = useLatLng()
+import { useLatLng } from '@/store/latLngState'
+const datosUbicacion = useLatLng()
+import { useStoreCDP } from '@/store/Negocio/StoreCDP.js'
+const CasasDePaz = useStoreCDP()
+//pintar centro en mapa
+const markerOptions = computed(() => {
+  if (datosUbicacion.lat && datosUbicacion.lng) {
+    return {
+      position: { lat: Number(datosUbicacion.lat), lng: Number(datosUbicacion.lng) },
+      title: 'Mi ubicación',
+    }
+  }
+  return null
+})
+const centroMapa = computed(() => {
+  if (datosUbicacion.lat && datosUbicacion.lng) {
+    return { lat: Number(datosUbicacion.lat), lng: Number(datosUbicacion.lng) }
+  }
+
+  return { lat: 19.432608, lng: -99.133209 }
+})
+
+//props
+
+const props = defineProps({
+  id: {
+    type: Number,
+    default: null,
+  },
+})
+
+//funciones
 const Unhide = (data) => {
   storeCard.setdata(data)
   storeCard.swichtStatus(true)
   console.log(storeCard.statusCard)
 }
-const mapStyles = ref([
-  {
-    featureType: 'road',
-    elementType: 'geometry.fill',
-    stylers: [
-      { color: '#000000' }, // Verde claro
-    ],
-  },
-])
+const seleccionarCasaPorMagicLink = (casaId) => {
+  console.log(CasasDePaz.CasasDePaz)
+  if (!casaId || !CasasDePaz.CasasDePaz.length) return
 
-console.log(cdpdir.value)
+  const casaEncontrada = CasasDePaz.CasasDePaz.find((casa) => casa.casa_id == casaId)
+  console.log(casaEncontrada)
+
+  if (casaEncontrada) {
+    Unhide(casaEncontrada)
+  }
+}
+//ciclo vida
+onMounted(async () => {
+  await CasasDePaz.EstablcerCasasDePaz()
+  if (props.id) {
+    seleccionarCasaPorMagicLink(props.id)
+  }
+})
 </script>
 <template>
-  <section>
+  <direccion v-if="datosUbicacion.modalStatus == true" />
+  <section v-if="CasasDePaz.CasasDePaz.length > 0 && datosUbicacion.lat && datosUbicacion.lng">
     <div class="p_uno">
+      <div class="mapa-header">
+        <h5 class="mapa-titulo"><i class="bi bi-geo-alt-fill me-2"></i>NUESTRAS CASAS DE PAZ</h5>
+        <span class="mapa-subtitulo">Ubicaciones disponibles</span>
+      </div>
       <GoogleMap
         api-key="AIzaSyBky4Bi1jZxJNgpXYmKMx-SQB80InwgT9w"
         mapId="f90d18df990b00e779f908dd"
         class="map"
-        :center="center"
-        :zoom="12"
-        :styles="mapStyles"
+        :center="centroMapa"
+        :zoom="15"
+        :disable-default-ui="true"
+        :zoom-control="true"
       >
         <CustomMarker :options="markerOptions">
           <div style="text-align: center">
@@ -49,7 +90,7 @@ console.log(cdpdir.value)
         </CustomMarker>
         <MarkerCluster>
           <CustomMarker
-            v-for="(location, i) in cdpdir"
+            v-for="(location, i) in CasasDePaz.CasasDePaz"
             :key="i"
             :options="{ position: location, anchorPoint: 'BOTTOM_CENTER' }"
           >
@@ -64,7 +105,7 @@ console.log(cdpdir.value)
     </div>
     <div class="p_dos">
       <card v-if="storeCard.statusCard == true" />
-      <distanceCDP v-if="direccionStatus.lat != 0 && direccionStatus.lng != 0" />
+      <distanceCDP v-if="datosUbicacion.lat != 0 && datosUbicacion.lng != 0" />
     </div>
   </section>
 </template>

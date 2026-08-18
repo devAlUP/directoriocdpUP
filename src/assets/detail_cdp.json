@@ -177,7 +177,7 @@
     "telefono": " 55-45-76-66-22",
     "colider_uno": "Lili Zurita ",
     "colider_dos": "n/a",
-    "lat": 19.372062206862477, 
+    "lat": 19.372062206862477,
     "lng": -99.29473845136413,
     "img": "https://storage.googleapis.com/fotos_cdpp/yoss.jpg"
   },
@@ -807,8 +807,7 @@
     "lat": 19.376422971436195,
     "lng": -99.28539525861991,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
-  }
-  ,
+  },
   {
     "nombre": "IZTAPALAPA 5 ",
     "direccion": "Calle Chinampa Mz 374 Lt 44, Col. Miguel de la Madrid, C.P. 09698, Alcaldía Iztapalapa",
@@ -817,7 +816,7 @@
     "telefono": " 56-21-49-62-33",
     "colider_uno": "Martha Tonche ",
     "colider_dos": "n/a",
-    "lat": 19.34000131463138, 
+    "lat": 19.34000131463138,
     "lng": -99.00319284523822,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
@@ -829,7 +828,7 @@
     "telefono": " 72-21-16-85-21",
     "colider_uno": "Maricarmen Pimentel ",
     "colider_dos": "Rafael Pimentel  ",
-    "lat": 19.261803911442257, 
+    "lat": 19.261803911442257,
     "lng": -99.59607510144215,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
@@ -841,7 +840,7 @@
     "telefono": " 44-92-01-71-71",
     "colider_uno": "Martha Lizarraga ",
     "colider_dos": " n/a ",
-    "lat": 19.361571558932102, 
+    "lat": 19.361571558932102,
     "lng": -99.26717006808003,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
@@ -853,7 +852,7 @@
     "telefono": " 56-39-60-95-16",
     "colider_uno": "Karina Ramírez  ",
     "colider_dos": "Adela Mejía ",
-    "lat": 19.265864103345933, 
+    "lat": 19.265864103345933,
     "lng": -99.64267659200748,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   },
@@ -865,7 +864,7 @@
     "telefono": " 55-46-92-72-12 ",
     "colider_uno": "Veronica Vazquez  ",
     "colider_dos": "n/a",
-    "lat": 19.481501045845956, 
+    "lat": 19.481501045845956,
     "lng": -99.10062288543324,
     "img": "https://storage.googleapis.com/fotos_cdpp/logo.jfif"
   }

@@ -1,67 +1,470 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* 3. Ajuste a la tarjeta para que mantenga su tamaño */
+.contenedor {
+  width: 100%;
+
+  height: 100dvh;
+  padding-top: 8dvh;
+}
 h3 {
   font-family: 'Bebas Neue', sans-serif;
-  margin-top: 6vw;
-  margin-left: 2rem;
-  margin-bottom: 1vw;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 0.75rem;
 }
-.caja-recomendacion {
-  width: 45vw;
-  margin-left: 2.5vw;
-  margin-bottom: 1vw;
-  background-color: black;
+.carrusel-tarjetas {
   display: flex;
   flex-direction: row;
-  border-radius: 8px;
-  padding: 1vw;
-}
-.caja-recomendacion img {
-  width: 10vw;
-  height: 10vw;
-  border-radius: 5px;
-  margin-right: 1.5vw;
-}
-p {
-  margin-left: 1vw;
-}
-button {
-  color: white;
-  border-color: white;
-  background-color: transparent;
-  border-radius: 5px;
+  flex-wrap: wrap; /* ¡IMPORTANTE! Para que se alineen horizontalmente */
+  width: 100%;
+  gap: 1rem;
+  padding: 0 1rem 1rem 1rem; /* Margen interno para el scroll y sombras */
+
+  overflow-x: auto; /* Habilita el scroll horizontal solo en las tarjetas */
+  scroll-snap-type: x mandatory; /* Hace que se detenga de forma suave en cada tarjeta */
+  -webkit-overflow-scrolling: touch;
 }
 
+.caja-recomendacion {
+  width: 80vw;
+  max-width: 350px; /* Tamaño máximo para que en pantallas grandes no se deforme */
+  flex-shrink: 0; /* ¡IMPORTANTE! Evita que las tarjetas se compriman */
+  scroll-snap-align: start; /* Enganche suave con el scroll */
+
+  background-color: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.caja-recomendacion:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: #121212;
+}
+
+.componetes-tarjeta {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.img-container {
+  width: 85px;
+  height: 85px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.caja-recomendacion img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nombre-cdp {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+  width: 100%;
+}
+
+.direccion-cdp {
+  color: #a0a0a0;
+  font-size: 0.85rem;
+  line-height: 1.25;
+  margin: 0 0 0.5rem 0;
+}
+
+.btn-ver-mas {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.header-tarjeta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Base del Badge */
+.badge-medalla {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 1er Lugar: ORO */
+.medalla-oro {
+  background: linear-gradient(135deg, #ffd700 0%, #cca000 100%);
+  color: #000000;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* 2do Lugar: PLATA */
+.medalla-plata {
+  background: linear-gradient(135deg, #e0e0e0 0%, #9e9e9e 100%);
+  color: #000000;
+  box-shadow: 0 0 10px rgba(224, 224, 224, 0.3);
+}
+
+/* 3er Lugar: BRONCE */
+.medalla-bronce {
+  background: linear-gradient(135deg, #cd7f32 0%, #8c531b 100%);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(205, 127, 50, 0.3);
+}
+
+.brand-iglesia {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 3rem;
+  opacity: 0.9;
+  padding-right: 4vw;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nombre-iglesia {
+  margin-top: auto;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+}
 @media (max-width: 1024px) {
+  /* 1. El contenedor ya NO lleva scroll horizontal */
+  .contenedor {
+    width: 100%;
+    overflow-x: hidden; /* Evita que la pantalla completa haga scroll horizontal */
+  }
+
   h3 {
     font-family: 'Bebas Neue', sans-serif;
     margin-top: 2rem;
-    margin-left: 2rem;
-    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 0.75rem;
   }
+  /* 3. Ajuste a la tarjeta para que mantenga su tamaño */
   .caja-recomendacion {
-    width: 95vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5w;
-    margin-bottom: 1vw;
-    background-color: black;
+    width: 80vw;
+    max-width: 350px; /* Tamaño máximo para que en pantallas grandes no se deforme */
+    flex-shrink: 0; /* ¡IMPORTANTE! Evita que las tarjetas se compriman */
+    scroll-snap-align: start; /* Enganche suave con el scroll */
+
+    background-color: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .caja-recomendacion:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: #121212;
+  }
+
+  .componetes-tarjeta {
     display: flex;
     flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .img-container {
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
     border-radius: 8px;
+    overflow: hidden;
   }
+
   .caja-recomendacion img {
-    margin: 3vw;
-    width: 20vw;
-    height: 20vw;
-    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
   }
-  p {
-    line-height: 1;
-    margin-bottom: 0.5;
+
+  .datos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  button {
-    color: white;
-    border-color: white;
+
+  .nombre-cdp {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem 0;
+    width: 100%;
+  }
+
+  .direccion-cdp {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .btn-ver-mas {
+    color: #ffffff;
+    border: 1px solid #ffffff;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 20px;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .header-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Base del Badge */
+  .badge-medalla {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* 1er Lugar: ORO */
+  .medalla-oro {
+    background: linear-gradient(135deg, #ffd700 0%, #cca000 100%);
+    color: #000000;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  }
+
+  /* 2do Lugar: PLATA */
+  .medalla-plata {
+    background: linear-gradient(135deg, #e0e0e0 0%, #9e9e9e 100%);
+    color: #000000;
+    box-shadow: 0 0 10px rgba(224, 224, 224, 0.3);
+  }
+
+  /* 3er Lugar: BRONCE */
+  .medalla-bronce {
+    background: linear-gradient(135deg, #cd7f32 0%, #8c531b 100%);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(205, 127, 50, 0.3);
+  }
+  /* 2. El scroll horizontal AHORA vive aquí */
+  .carrusel-tarjetas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* ¡IMPORTANTE! Para que se alineen horizontalmente */
+    width: 100%;
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem; /* Margen interno para el scroll y sombras */
+
+    overflow-x: auto; /* Habilita el scroll horizontal solo en las tarjetas */
+    scroll-snap-type: x mandatory; /* Hace que se detenga de forma suave en cada tarjeta */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Opcional: Ocultar la barra de scroll visual manteniendo la funcionalidad */
+  .carrusel-tarjetas::-webkit-scrollbar {
+    display: none;
+  }
+  .carrusel-tarjetas {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* 3. Ajuste a la tarjeta para que mantenga su tamaño */
+  .caja-recomendacion {
+    width: 80vw;
+    max-width: 350px; /* Tamaño máximo para que en pantallas grandes no se deforme */
+    flex-shrink: 0; /* ¡IMPORTANTE! Evita que las tarjetas se compriman */
+    scroll-snap-align: start; /* Enganche suave con el scroll */
+
+    background-color: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .caja-recomendacion:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: #121212;
+  }
+
+  .componetes-tarjeta {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .img-container {
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .caja-recomendacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+
+  .datos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nombre-cdp {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem 0;
+    width: 100%;
+  }
+
+  .direccion-cdp {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .btn-ver-mas {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .header-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Base del Badge */
+  .badge-medalla {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* 1er Lugar: ORO */
+  .medalla-oro {
+    background: linear-gradient(135deg, #ffd700 0%, #cca000 100%);
+    color: #000000;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  }
+
+  /* 2do Lugar: PLATA */
+  .medalla-plata {
+    background: linear-gradient(135deg, #e0e0e0 0%, #9e9e9e 100%);
+    color: #000000;
+    box-shadow: 0 0 10px rgba(224, 224, 224, 0.3);
+  }
+
+  /* 3er Lugar: BRONCE */
+  .medalla-bronce {
+    background: linear-gradient(135deg, #cd7f32 0%, #8c531b 100%);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(205, 127, 50, 0.3);
+  }
+
+  .brand-iglesia {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 2rem;
+    opacity: 0.9;
+    padding-right: 4vw;
+  }
+
+  .logo-img {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .nombre-iglesia {
+    margin-top: auto;
+    margin-bottom: 0;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
   }
 }
