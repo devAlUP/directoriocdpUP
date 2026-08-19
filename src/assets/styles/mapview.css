@@ -54,24 +54,27 @@ section {
   section {
     display: flex;
     flex-direction: column;
+    height: auto !important;
   }
   .p_uno {
     width: 100%;
+    margin-bottom: 0; /* Asegura que no haya margen inferior en la columna 1 */
+    padding-bottom: 0;
   }
   .p_dos {
     width: 100%;
-    overflow-y: scroll;
+    margin-top: 0.5rem; /* Margen pequeño y controlado para despegar ligeramente <distanceCDP> */
+    padding-top: 0;
   }
-
   .map {
-    margin-top: 5vw;
-    width: 90vw;
-    height: 90vw;
+    margin-top: 1rem;
+    margin-bottom: 0; /* Quita cualquier espacio sobrante bajo el mapa */
+    width: 90vw; /* Toma el ancho disponible sin dejar huecos laterales */
     margin-left: 5vw;
+    height: 280px; /* Altura fija adecuada para móviles en lugar de 70vw */
 
-    border-radius: 20px; /* Ajusta el radio que prefieras */
-    overflow: hidden; /* ¡IMPORTANTE! Corta las esquinas del mapa interno de Google */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Opcional: sombra elegante */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .buscar {
