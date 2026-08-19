@@ -302,6 +302,8 @@
 @media (max-width: 576px) {
   .c-fixed {
     max-width: 92vw;
+    max-height: 90dvh;
+    overflow-y: scroll;
   }
 
   .grid-info {
