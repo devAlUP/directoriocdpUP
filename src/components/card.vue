@@ -83,8 +83,6 @@ const compartirPorWhatsApp = () => {
           </CustomMarker>
         </GoogleMap>
 
-        <!-- Botón Cierre -->
-
         <!-- Overlay con Perfil + Nombre sobre el mapa -->
         <div class="hero-overlay">
           <img class="profile-img" :src="storeCard.dataCard.img" :alt="storeCard.dataCard.nombre" />
@@ -129,30 +127,32 @@ const compartirPorWhatsApp = () => {
             <span class="label"><i class="bi bi-person-badge me-1"></i> Colíder</span>
             <p class="value">{{ storeCard.dataCard.colider }}</p>
           </div>
-          <div class="card-actions">
-            <label for="whatsapp-phone" class="input-label">
-              <i class="bi bi-send-fill me-1"></i> Compartir por WhatsApp
-            </label>
+        </div>
 
-            <div class="whatsapp-input-group">
-              <input
-                id="whatsapp-phone"
-                v-model="telefono"
-                type="tel"
-                class="input-whatsapp"
-                placeholder="Número (ej. 5512345678)"
-                maxlength="10"
-                @keyup.enter="compartirPorWhatsApp"
-              />
-              <button
-                type="button"
-                class="btn-whatsapp"
-                @click="compartirPorWhatsApp"
-                :disabled="!telefonoValido"
-              >
-                <i class="bi bi-whatsapp me-2"></i> ENVIAR
-              </button>
-            </div>
+        <!-- Sección de WhatsApp (AQUÍ AFUERA DEL GRID-INFO) -->
+        <div class="card-actions">
+          <label for="whatsapp-phone" class="input-label">
+            <i class="bi bi-send-fill me-1"></i> Compartir por WhatsApp
+          </label>
+
+          <div class="whatsapp-input-group">
+            <input
+              id="whatsapp-phone"
+              v-model="telefono"
+              type="tel"
+              class="input-whatsapp"
+              placeholder="Número (ej. 5512345678)"
+              maxlength="10"
+              @keyup.enter="compartirPorWhatsApp"
+            />
+            <button
+              type="button"
+              class="btn-whatsapp"
+              @click="compartirPorWhatsApp"
+              :disabled="!telefonoValido"
+            >
+              <i class="bi bi-whatsapp me-1"></i> ENVIAR
+            </button>
           </div>
         </div>
       </div>
