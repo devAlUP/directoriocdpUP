@@ -1,116 +1,351 @@
+/* Overlay de fondo */
 .c-font {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100dvh;
-  background-color: rgba(73, 64, 64, 0.649);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.c-fixed {
+  width: 100%;
+  max-width: 650px;
+  height: 70dvh;
+  overflow-y: auto;
+  background-color: #0d0d0d !important;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+/* Ocultar scrollbar del modal si el texto sobrepasa */
+.c-fixed::-webkit-scrollbar {
+  display: none;
 }
 .c-fixed {
-  margin-top: 3rem;
-  width: 50vw;
-  margin-left: 25vw;
-  z-index: 5;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+/* 1. Header con Mapa y Perfil */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Le damos un poco más de alto para lucir el mapa y el texto */
+}
+.map {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+/* Franja inferior sobre el mapa para Foto + Nombre */
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1.25rem 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  /* Degradado negro elegante de abajo hacia arriba */
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 13, 0.95) 20%,
+    rgba(13, 13, 13, 0.6) 70%,
+    transparent 100%
+  );
+  z-index: 10;
+}
+
+/* Avatar Flotante */
+.profile-img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  filter: grayscale(100%);
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card-title {
+  color: #ffffff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  margin: 0 0 0.2rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto extra por seguridad */
+}
+
+/* Botón Cierre */
+.bt-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(232, 20, 20, 0.086);
+  color: black;
+  padding: 0.5rem;
+  border-radius: 50%;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.bt-close:hover {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 1rem 1.25rem 1.25rem 1.25rem; /* Ya no requiere padding alto extra */
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.card-title {
+  color: #ffffff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  margin: 0 0 0.2rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto extra por seguridad */
+}
+.badge-cdp {
+  font-size: 0.65rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #eeeeee;
+  padding: 0.15rem 0.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-address {
+  color: #b0b0b0;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+/* Grid de Datos 2x2 */
+.grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.85rem;
+}
+
+.datos-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.datos-card .label {
+  font-size: 0.7rem;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.15rem;
+}
+
+.datos-card .value {
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* Pantalla Loader */
 .loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 7;
-  background-color: rgba(73, 64, 64, 0.649);
-  height: 100%;
+  height: 100dvh;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
+
 .loader img {
-  margin-left: 45vw;
-  width: 10vw;
-  object-fit: cover; /* Para mantener la relación de aspecto */
-  animation: crecer 1.5s infinite alternate;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  animation: crecer 1.5s infinite alternate ease-in-out;
 }
+
 @keyframes crecer {
   0% {
-    transform: scale(1);
+    transform: scale(0.9);
   }
   100% {
-    transform: scale(1.2); /* Aumenta el tamaño */
+    transform: scale(1.15);
   }
 }
-
-.loader h1 {
-  text-align: center;
-}
-.datos-card {
+.card-actions {
+  margin-top: 1.25rem;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-.bt-close {
-  position: fixed;
-  top: 1rem;
-  right: 5%;
-}
-.profile {
-  border-radius: 100%;
-  margin-top: -7vw;
-  width: 15vw;
-  height: 15vw;
-  z-index: 5;
-  margin-left: 1rem;
-}
-p {
-  margin-left: 3px;
-}
-@media (max-width: 1024px) {
-  .c-font {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100dvh;
-    background-color: rgba(73, 64, 64, 0.649);
 
-    z-index: 1;
-  }
+.input-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  color: #4a5568;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Contenedor del Input + Botón */
+.whatsapp-input-group {
+  display: flex;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #e2e8f0;
+  transition: border-color 0.25s ease;
+}
+
+.whatsapp-input-group:focus-within {
+  border-color: #25d366;
+}
+
+/* Campo de Texto (Teléfono) */
+.input-whatsapp {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  color: #2d3748;
+  background-color: #ffffff;
+}
+
+.input-whatsapp::placeholder {
+  color: #a0aec0;
+  font-size: 0.85rem;
+}
+
+/* Botón Estilo WhatsApp */
+.btn-whatsapp {
+  padding: 0.75rem 1.25rem;
+  background-color: #25d366;
+  color: #ffffff;
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  white-space: nowrap;
+}
+
+.btn-whatsapp:hover:not(:disabled) {
+  background-color: #20ba5a;
+}
+
+.btn-whatsapp:active:not(:disabled) {
+  background-color: #1b9e4d;
+}
+
+.btn-whatsapp:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-whatsapp i {
+  font-size: 1.1rem;
+}
+/* Ajustes Responsivos Móviles */
+@media (max-width: 576px) {
   .c-fixed {
-    margin-top: 3rem;
-    width: 80vw;
-    margin-left: 10vw;
-    z-index: 5;
-  }
-  .loader img {
-    margin-left: 30vw;
-    width: 40vw;
-    object-fit: cover; /* Para mantener la relación de aspecto */
-    animation: crecer 1.5s infinite alternate;
-  }
-  @keyframes crecer {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.2); /* Aumenta el tamaño */
-    }
+    max-width: 92vw;
   }
 
-  .datos-card {
+  .grid-info {
+    grid-template-columns: 1fr; /* Pasa a 1 columna si la pantalla es muy estrecha */
+    gap: 0.6rem;
+  }
+
+  .card-actions {
+    margin-top: 1.25rem;
+    width: 100%;
+  }
+
+  /* Botón Estilo WhatsApp */
+  .btn-whatsapp {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #25d366; /* Verde oficial de WhatsApp */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
   }
 
-  .bt-close {
-    position: fixed;
-    top: 1rem;
-    right: 5%;
+  /* Efecto al pasar el mouse / presionar */
+  .btn-whatsapp:hover {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
   }
-  .profile {
-    border-radius: 100%;
-    margin-top: -15vw;
-    width: 30vw;
-    height: 30vw;
-    z-index: 5;
-    margin-left: 1rem;
+
+  .btn-whatsapp:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.2);
+  }
+
+  .btn-whatsapp i {
+    font-size: 1.2rem;
   }
 }

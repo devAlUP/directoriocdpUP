@@ -10,29 +10,27 @@ export const useCardStatus = defineStore('hideUnhide', () => {
   }
   const setdata = (data) => {
     let aux_colider
-    if (data.colider_uno == 'n/a' && data.colider_dos == 'n/a') {
+    if (!data.colider_1_nombre && !data.colider_2_nombre) {
       aux_colider = 'n/a'
     }
-    if (data.colider_uno != 'n/a' && data.colider_dos != 'n/a') {
-      aux_colider = data.colider_uno + ' y ' + data.colider_dos
+    if (data.colider_1_nombre && data.colider_2_nombre) {
+      aux_colider = data.colider_1_nombre + ' y ' + data.colider_2_nombre
     }
 
-    if (data.colider_uno != 'n/a' && data.colider_dos == 'n/a') {
-      aux_colider = data.colider_uno
+    if (data.colider_1_nombre && !data.colider_2_nombre) {
+      aux_colider = data.colider_1_nombre
     }
 
     dataCard.value.nombre = data.nombre
-    dataCard.value.direccion = data.direccion
-    dataCard.value.lider = data.lider
+    dataCard.value.direccion = data.direccion_completa || data.direccion
+    dataCard.value.lider = data.lider_nombre
     dataCard.value.colider = aux_colider
     dataCard.value.telefono = LadaTelefonos(data.telefono)
     dataCard.value.horario = data.horario
     dataCard.value.lat = data.lat
     dataCard.value.lng = data.lng
     dataCard.value.img = data.img
-    console.log(data.img)
-    console.log(dataCard.value.colider)
-    console.log(LadaTelefonos(data.telefono))
+    dataCard.value.casa_id = data.casa_id
   }
   return { statusCard, swichtStatus, dataCard, setdata }
 })

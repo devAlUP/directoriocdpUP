@@ -6,17 +6,28 @@
   width: 100vw;
   height: 100dvh;
   background-color: rgba(73, 64, 64, 0.649);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  z-index: 100;
 }
 .buscar-text {
-  width: 50vw;
+  width: 30vw;
   border-radius: 10px;
-  margin-top: 25vh;
-  margin-left: 25vw;
+  padding: 1rem;
+  margin-left: 35vw;
   background-color: black;
 
   border-color: white;
   margin-bottom: 1rem;
+
+  /* 1. Borde sutil blanco translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  /* 2. Sombra profunda e intensa */
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.05);
 }
 .buscar-text h4 {
   padding: 1rem;
@@ -36,9 +47,7 @@ p {
   margin-left: 40%;
   margin-bottom: 1rem;
   border-radius: 10px;
-  background-color: transparent;
-  color: white;
-  border-color: white;
+
   padding: 1vh;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2vh;
@@ -48,10 +57,7 @@ p {
   padding: 1vh;
   margin-left: 30%;
   margin-bottom: 1rem;
-  color: white;
-  background-color: transparent;
-  border-color: white;
-  border-radius: 10px;
+
   font-family: 'Bebas Neue', sans-serif;
 }
 .notif {
@@ -74,13 +80,22 @@ h5 {
     justify-content: center;
   }
   .buscar-text {
-    width: 96vw;
-    color: black;
-
-    margin-top: 25vh;
-    margin-left: 2vw;
+    width: 90vw;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-left: 5vw;
+    background-color: black;
 
     border-color: white;
+    margin-bottom: 1rem;
+
+    /* 1. Borde sutil blanco translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* 2. Sombra profunda e intensa */
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.05);
   }
   .buscar-text h4 {
     padding: 1rem;
