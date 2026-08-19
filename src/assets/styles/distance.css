@@ -172,12 +172,14 @@ h3 {
   /* 1. El contenedor ya NO lleva scroll horizontal */
   .contenedor {
     width: 100%;
-    overflow-x: hidden; /* Evita que la pantalla completa haga scroll horizontal */
+    height: auto; /* IMPORTANTE: antes tenía 100dvh */
+    min-height: initial;
+    padding-top: 0; /* Quita el 8dvh de relleno superior */
   }
 
   h3 {
     font-family: 'Bebas Neue', sans-serif;
-    margin-top: 2rem;
+    margin-top: 5px;
     margin-left: 1rem;
     margin-bottom: 0.75rem;
   }
