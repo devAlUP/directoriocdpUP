@@ -301,38 +301,41 @@
 /* Ajustes Responsivos Móviles */
 @media (max-width: 576px) {
   .c-fixed {
-    max-width: 92vw;
-    max-height: 90dvh;
-    overflow-y: scroll;
+    max-width: 95vw;
+    height: auto; /* Permite adaptarse a pantallas chicas */
+    max-height: 85dvh; /* Evita salirse de la pantalla */
+    overflow-y: auto;
+  }
+  .map-container {
+    height: 200px;
   }
 
   .grid-info {
-    grid-template-columns: 1fr; /* Pasa a 1 columna si la pantalla es muy estrecha */
+    grid-template-columns: 1fr; /* 1 columna en pantallas estrechas */
     gap: 0.6rem;
   }
-
   .card-actions {
     margin-top: 1.25rem;
     width: 100%;
   }
-
+  .whatsapp-input-group {
+    display: flex;
+    flex-direction: row; /* Mantiene input y botón en la misma línea */
+    width: 100%;
+    border-radius: 12px;
+  }
+  .input-whatsapp {
+    min-width: 0; /* Evita overflow del input en pantallas muy angostas */
+    font-size: 0.85rem;
+    padding: 0.6rem 0.75rem;
+  }
   /* Botón Estilo WhatsApp */
   .btn-whatsapp {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    background-color: #25d366; /* Verde oficial de WhatsApp */
-    color: #ffffff;
-    border: none;
-    border-radius: 12px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.25rem;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.25s ease-in-out;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    width: auto; /* QUITA EL width: 100% que lo rompía */
+    padding: 0.6rem 0.85rem;
+    font-size: 1rem;
+    border-radius: 0;
+    flex-shrink: 0; /* Impide que el botón se comprima */
   }
 
   /* Efecto al pasar el mouse / presionar */
